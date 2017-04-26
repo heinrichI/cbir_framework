@@ -1,7 +1,8 @@
 import itertools
 from contextlib import ExitStack
+import numpy as np
 
-from common import itertools_utils
+from common.aggregate_iterable import aggregate_iterable
 from data_store import datastore
 
 
@@ -25,23 +26,25 @@ class StreamNdarrayAdapterDataStore(datastore.DataStore):
                 stack.enter_context(self.stream_data_store)
             return self.stream_data_store.get_count()
 
-    def get_items_sorted_by_ids(self, ids_sorted=None):
+    def get_items_sorted_by_ids(self, ids_sorted: np.ndarray = None):
         with ExitStack() as stack:
             if hasattr(self.stream_data_store, '__enter__'):
                 stack.enter_context(self.stream_data_store)
 
+            ids_sorted_stream = None
             if ids_sorted is not None:
-                ids_sorted, ids_sorted_copy = itertools.tee(ids_sorted, 2)
-                count_ = sum(1 for _ in ids_sorted_copy)
+                count_ = ids_sorted.shape[0]
+                ids_sorted = ids_sorted.ravel()
+                ids_sorted_stream = iter(ids_sorted)
             else:
                 count_ = self.stream_data_store.get_count()
 
-            items_sorted_by_ids = self.stream_data_store.get_items_sorted_by_ids(ids_sorted)
-            items_sorted_by_ids_ndarray = itertools_utils.aggregate_arrays(items_sorted_by_ids, count_)
+            items_sorted_by_ids_stream = self.stream_data_store.get_items_sorted_by_ids(ids_sorted_stream)
+            items_sorted_by_ids_ndarray = aggregate_iterable(items_sorted_by_ids_stream, count_)
 
             return items_sorted_by_ids_ndarray
 
-    def save_items_sorted_by_ids(self, items_sorted_by_ids, ids_sorted=None):
+    def save_items_sorted_by_ids(self, items_sorted_by_ids: np.ndarray, ids_sorted: np.ndarray = None):
         with ExitStack() as stack:
             if hasattr(self.stream_data_store, '__enter__'):
                 stack.enter_context(self.stream_data_store)
@@ -61,7 +64,7 @@ class StreamNdarrayAdapterDataStore(datastore.DataStore):
                 stack.enter_context(self.stream_data_store)
             ids_sorted = self.stream_data_store.get_ids_sorted()
             count_ = self.stream_data_store.get_count()
-            ids_sorted_ndarray = itertools_utils.aggregate_scalars(ids_sorted, count_)
+            ids_sorted_ndarray = aggregate_iterable(ids_sorted, count_)
             return ids_sorted_ndarray
 
     def is_stream_data_store(self):

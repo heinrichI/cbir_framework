@@ -1,10 +1,7 @@
 import unittest
 
 import numpy as np
-
 from search import exhaustive_searcher
-
-
 
 class ExhaustiveSearcherTest(unittest.TestCase):
     def test_exhaustive_searcher(self):

@@ -1,5 +1,6 @@
-from itertools import *
 import collections
+from itertools import *
+
 import numpy as np
 
 
@@ -71,34 +72,3 @@ def transform_consume_pipe_line(id_stream: collections.Iterable, input_stream: c
     consumer(id_output_stream)
 
 
-def aggregate_scalars(scalars, count_):
-    first_scalar = next(scalars)
-    scalar_type = type(first_scalar)
-    scalars_restored = chain([first_scalar], scalars)
-    scalars_ndarray = np.fromiter(scalars_restored, dtype=scalar_type, count=count_)
-    if isinstance(scalar_type, np.ndarray):
-        scalars_ndarray = scalars_ndarray.reshape((count_,) + first_scalar.shape)
-    return scalars_ndarray
-
-
-def aggregate_arrays(arrays: collections.Iterable, rows=None):
-    """ construct one array from arrays. These arrays would be rows in new array. Assuming all arrays same shape"""
-    first = next(arrays)
-    # print("first", first)
-    arrays = chain(first, arrays)
-    cfi = chain.from_iterable(map(np.ravel, arrays))
-    # print("start fromiter")
-    if rows:
-        ndarray = np.fromiter(cfi, first.dtype, count=rows * first.size)
-    else:
-        ndarray = np.fromiter(cfi, first.dtype)
-    # print(ndarray)
-    # print("end fromiter")
-    elements_in_first = first.size
-    # rows = len(ndarray) // elements_in_first
-    rows = ndarray.size // elements_in_first
-    # print("computed shape: ", (rows,) + first.shape)
-    ndarray.shape = (rows,) + first.shape
-    # print(ndarray)
-
-    return ndarray

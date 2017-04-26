@@ -6,12 +6,11 @@ from data_store.sqlite_table_datastore import SQLiteTableDataStore, get_two_sqli
 from data_store.numpy_datastore import NumpyDataStore
 
 import steps
-from common.itertools_utils import aggregate_arrays
 from data_store import numpy_datastore
 from quantization import pq_quantizer
 from search import exhaustive_searcher
 from transformer import transformers as tr
-
+from common.aggregate_iterable import aggregate_iterable
 
 def doubled_transform(items):
     return (item * 2 for item in items)
@@ -103,7 +102,7 @@ class SQLTabelDataStoreComputeDescriptorsTestCase(unittest.TestCase):
 
         with sqltable_out_ds:
             cluster_centers = sqltable_out_ds.get_items_sorted_by_ids()
-            cluster_centers_ndarray = aggregate_arrays(cluster_centers)
+            cluster_centers_ndarray = aggregate_iterable(cluster_centers)
             truth_shape = (2, 4, 4)
             self.assertEquals(cluster_centers_ndarray.shape, truth_shape)
 
@@ -118,7 +117,7 @@ class SQLTabelDataStoreComputeDescriptorsTestCase(unittest.TestCase):
         with sqltable_in_ds:
             items = sqltable_in_ds.get_items_sorted_by_ids()
             count_ = sqltable_in_ds.get_count()
-            items = aggregate_arrays(items, count_)
+            items = aggregate_iterable(items, count_)
             ids = np.arange(1, 11)
             searcher_ = exhaustive_searcher.ExhaustiveSearcher(items, ids)
 

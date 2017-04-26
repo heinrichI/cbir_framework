@@ -40,11 +40,9 @@ class SQLiteTableDataStore(DataStore):
         self.db_path = db_path
         self.table_name = table_name
         self.item_column_type = item_column_type
-
         # Converts np.array to TEXT when inserting
         sqlite3.register_adapter(np.ndarray, adapt_array)
         sqlite3.register_adapter(np.int32, adapt_npint)
-
         # Converts TEXT to np.array when selecting
         sqlite3.register_converter("ndarray", convert_array)
 
@@ -67,7 +65,7 @@ class SQLiteTableDataStore(DataStore):
         ids = map(lambda id_tup: id_tup[0], ids)
         return ids
 
-    def get_items_sorted_by_ids(self, ids_sorted=None):
+    def get_items_sorted_by_ids(self, ids_sorted: collections.Iterable = None):
         if not ids_sorted:
             item_stream = self.connection.execute('SELECT item FROM {0} ORDER BY item_id'.format(self.table_name))
         else:
@@ -85,7 +83,8 @@ class SQLiteTableDataStore(DataStore):
         item_stream = map(lambda item_tup: item_tup[0], item_stream)
         return item_stream
 
-    def save_items_sorted_by_ids(self, items_sorted_by_ids, ids_sorted=None):
+    def save_items_sorted_by_ids(self, items_sorted_by_ids: collections.Iterable,
+                                 ids_sorted: collections.Iterable = None):
         self.connection.execute(
             r"CREATE TABLE IF NOT EXISTS {0} (item_id INTEGER PRIMARY KEY, item {1})".format(self.table_name,
                                                                                              self.item_column_type))

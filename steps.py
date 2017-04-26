@@ -12,7 +12,7 @@ from quantization.quantizer import Quantizer
 def transform_step(data_store_in: DataStore, transformers, data_store_out: DataStore) -> None:
     """
 
-          data_store_in and data_store_out must be of same type: both ndaray or both stream.
+          data_store_in and data_store_out must be of same type: both ndarray or both stream.
           transformers must be of ds type
     """
     # TODO add dataframe abstraction and make any step work with any type of data(stream and ndarray)
