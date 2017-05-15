@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="330d7d92-7a24-4680-8427-6531ccb9e54d" name="Default" comment="add tests">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cbir_framework.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/449fcbc3-486f-4bf8-900f-11dca1b13b23.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources/449fcbc3-486f-4bf8-900f-11dca1b13b23/storage.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/file_utils.py" afterPath="$PROJECT_DIR$/common/file_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/itertools_utils.py" afterPath="$PROJECT_DIR$/common/itertools_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/numpy_utils.py" afterPath="$PROJECT_DIR$/common/numpy_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_store/datastore.py" afterPath="$PROJECT_DIR$/data_store/datastore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_store/datastore_ndarray_adapter.py" afterPath="$PROJECT_DIR$/data_store/datastore_ndarray_adapter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_store/file_system_directory_datastore.py" afterPath="$PROJECT_DIR$/data_store/file_system_directory_datastore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_store/numpy_datastore.py" afterPath="$PROJECT_DIR$/data_store/numpy_datastore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_store/sqlite_table_datastore.py" afterPath="$PROJECT_DIR$/data_store/sqlite_table_datastore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_store/stream_ndarray_adapter_datastore.py" afterPath="$PROJECT_DIR$/data_store/stream_ndarray_adapter_datastore.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/compute_histograms_sqlite-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/compute_histograms_sqlite-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/example_find_nearest_by_histograms_with_multi_index-Copy1-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/example_find_nearest_by_histograms_with_multi_index-Copy1-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/example_find_nearest_by_histograms_with_multi_index-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/example_find_nearest_by_histograms_with_multi_index-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/.ipynb_checkpoints/find_nearest_by_histograms-checkpoint.ipynb" afterPath="$PROJECT_DIR$/examples/.ipynb_checkpoints/find_nearest_by_histograms-checkpoint.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/compute_histograms_sqlite.ipynb" afterPath="$PROJECT_DIR$/examples/compute_histograms_sqlite.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/example_find_nearest_by_histograms_with_multi_index.ipynb" afterPath="$PROJECT_DIR$/examples/example_find_nearest_by_histograms_with_multi_index.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/find_nearest_by_histograms.ipynb" afterPath="$PROJECT_DIR$/examples/find_nearest_by_histograms.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/import_hack.py" afterPath="$PROJECT_DIR$/examples/import_hack.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quantization/pq_quantizer.py" afterPath="$PROJECT_DIR$/quantization/pq_quantizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quantization/quantizer.py" afterPath="$PROJECT_DIR$/quantization/quantizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/exhaustive_searcher.py" afterPath="$PROJECT_DIR$/search/exhaustive_searcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/inverted_multi_index_searcher.py" afterPath="$PROJECT_DIR$/search/inverted_multi_index_searcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/nearest_search.py" afterPath="$PROJECT_DIR$/search/nearest_search.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/search/searcher.py" afterPath="$PROJECT_DIR$/search/searcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/steps.py" afterPath="$PROJECT_DIR$/steps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_exhaustive_searcher.py" afterPath="$PROJECT_DIR$/tests/test_exhaustive_searcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_file_system_directory_data_store.py" afterPath="$PROJECT_DIR$/tests/test_file_system_directory_data_store.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_inverted_multi_index_searcher.py" afterPath="$PROJECT_DIR$/tests/test_inverted_multi_index_searcher.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_itertools_util.py" afterPath="$PROJECT_DIR$/tests/test_itertools_util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_nearest_search.py" afterPath="$PROJECT_DIR$/tests/test_nearest_search.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_numpy_utils.py" afterPath="$PROJECT_DIR$/tests/test_numpy_utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_pq_quantizer.py" afterPath="$PROJECT_DIR$/tests/test_pq_quantizer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_sqlite_table_data_store.py" afterPath="$PROJECT_DIR$/tests/test_sqlite_table_data_store.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_steps.py" afterPath="$PROJECT_DIR$/tests/test_steps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_stream_ndarray_adapter_data_store.py" afterPath="$PROJECT_DIR$/tests/test_stream_ndarray_adapter_data_store.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/test_transformers.py" afterPath="$PROJECT_DIR$/tests/test_transformers.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/transformer/transformers.py" afterPath="$PROJECT_DIR$/transformer/transformers.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_exhaustive_searcher.coverage" NAME="Nosetests in test_exhaustive_searcher Coverage Results" MODIFIED="1490652360383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_ExhaustiveSearcherTest_test_exhaustive_searcher.coverage" NAME="Nosetest ExhaustiveSearcherTest.test_exhaustive_searcher Coverage Results" MODIFIED="1490737306009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_IterToolsTestCase.coverage" NAME="Nosetests in IterToolsTestCase Coverage Results" MODIFIED="1490822933672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLiteTableDataStoreNdarrayTestCase_test_setUpClass_tearDownClass__1_.coverage" NAME="Nosetest SQLiteTableDataStoreNdarrayTestCase.test_setUpClass_tearDownClass (1) Coverage Results" MODIFIED="1490554530015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_opencvmatrix_to_glcm__2_.coverage" NAME="Nosetest TestTransformers.test_opencvmatrix_to_glcm (2) Coverage Results" MODIFIED="1490565724502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_iterable_array_stream_with_count.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_with_count Coverage Results" MODIFIED="1490822876571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_SQLTabelDataStoreComputeDescriptorsTestCase.coverage" NAME="Nosetests in SQLTabelDataStoreComputeDescriptorsTestCase Coverage Results" MODIFIED="1490652521629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_.coverage" NAME="Nosetest TestTransformers.test_ Coverage Results" MODIFIED="1490565419468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_ExhaustiveSearchTest_test_exhaustive_searcher.coverage" NAME="Nosetest ExhaustiveSearchTest.test_exhaustive_searcher Coverage Results" MODIFIED="1490579929459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_stream_ndarray_adapter_data_store.coverage" NAME="Nosetests in test_stream_ndarray_adapter_data_store Coverage Results" MODIFIED="1490652292987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_itertools_util.coverage" NAME="Nosetests in test_itertools_util Coverage Results" MODIFIED="1490652328679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_empty__5_.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_empty (5) Coverage Results" MODIFIED="1490541137941" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_NearestSearchTest_test_predict.coverage" NAME="Nosetest NearestSearchTest.test_predict Coverage Results" MODIFIED="1490573411689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_StreamNdarrayAdapterDataStoreTestCase_test_get_items_sorted_by_ids.coverage" NAME="Nosetest StreamNdarrayAdapterDataStoreTestCase.test_get_items_sorted_by_ids Coverage Results" MODIFIED="1490726155924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_MyTestCase_test_pipeline_empty_transformers.coverage" NAME="Nosetest MyTestCase.test_pipeline_empty_transformers Coverage Results" MODIFIED="1490534013596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestItertoolsUtil_test_aggregate_arrays.coverage" NAME="Nosetest TestItertoolsUtil.test_aggregate_arrays Coverage Results" MODIFIED="1490530684618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_tests__2_.coverage" NAME="Nosetests in tests (2) Coverage Results" MODIFIED="1490652590253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_empty__1_.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_empty (1) Coverage Results" MODIFIED="1490540986336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_doubled_transform_exit_stack.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_doubled_transform_exit_stack Coverage Results" MODIFIED="1490564860894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_iterable_2Darray_stream_without_count.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_without_count Coverage Results" MODIFIED="1490822985393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_doubled_transform.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_doubled_transform Coverage Results" MODIFIED="1490575997486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_MyTestCase_test_something.coverage" NAME="Nosetest MyTestCase.test_something Coverage Results" MODIFIED="1490532971986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_getIds.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_getIds Coverage Results" MODIFIED="1490543923853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_doubled_transform__1_.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_doubled_transform (1) Coverage Results" MODIFIED="1490559920495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_search_step.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_search_step Coverage Results" MODIFIED="1490642624095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_iterable_int_range_with_count.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_iterable_int_range_with_count Coverage Results" MODIFIED="1490822273774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_quantize.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_quantize Coverage Results" MODIFIED="1490576055932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_setUpClass_tearDownClass.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_setUpClass_tearDownClass Coverage Results" MODIFIED="1490559669861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLiteTableDataStoreNdarrayTestCase_test_setUpClass_tearDownClass.coverage" NAME="Nosetest SQLiteTableDataStoreNdarrayTestCase.test_setUpClass_tearDownClass Coverage Results" MODIFIED="1490554627638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLiteTableDataStoreNdarrayTestCase_test_get_items_sorted_by_ids_particular_ids.coverage" NAME="Nosetest SQLiteTableDataStoreNdarrayTestCase.test_get_items_sorted_by_ids_particular_ids Coverage Results" MODIFIED="1490558845412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_samples.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_samples Coverage Results" MODIFIED="1490649762494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_opencvmatrix_to_glcm__1_.coverage" NAME="Nosetest TestTransformers.test_opencvmatrix_to_glcm (1) Coverage Results" MODIFIED="1490565505087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_pq_quantizer.coverage" NAME="Nosetests in test_pq_quantizer Coverage Results" MODIFIED="1490652313080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_empty__4_.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_empty (4) Coverage Results" MODIFIED="1490541124424" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_get_ids_sorted.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_get_ids_sorted Coverage Results" MODIFIED="1490544702253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_StreamNdarrayAdapterDataStoreTestCase_test_get_count.coverage" NAME="Nosetest StreamNdarrayAdapterDataStoreTestCase.test_get_count Coverage Results" MODIFIED="1490645497616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_StreamNdarrayAdapterDataStoreTestCase_test_save_items_sorted_by_ids_particular_ids.coverage" NAME="Nosetest StreamNdarrayAdapterDataStoreTestCase.test_save_items_sorted_by_ids_particular_ids Coverage Results" MODIFIED="1490648192925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_steps.coverage" NAME="Nosetests in test_steps Coverage Results" MODIFIED="1490652579058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$test_numpy_utils.coverage" NAME="test_numpy_utils Coverage Results" MODIFIED="1490728919113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_iterable_int_range.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_iterable_int_range Coverage Results" MODIFIED="1490822241167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_get_items_sorted_by_ids_particular_ids.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_get_items_sorted_by_ids_particular_ids Coverage Results" MODIFIED="1490545116562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_opencvmatrix_to_glcm__4_.coverage" NAME="Nosetest TestTransformers.test_opencvmatrix_to_glcm (4) Coverage Results" MODIFIED="1490566033505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_quantize_shape_only.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_quantize_shape_only Coverage Results" MODIFIED="1490576457958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_translate_arrays_by_keys.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_translate_arrays_by_keys Coverage Results" MODIFIED="1490732490525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_setUpClass_tearDownClass__2_.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_setUpClass_tearDownClass (2) Coverage Results" MODIFIED="1490560073446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_NearestSearchTest_test_findNearestIndices_all.coverage" NAME="Nosetest NearestSearchTest.test_findNearestIndices_all Coverage Results" MODIFIED="1490578971627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_arrays_as_scalars.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_arrays_as_scalars Coverage Results" MODIFIED="1490727117116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_tests__3_.coverage" NAME="Nosetests in tests (3) Coverage Results" MODIFIED="1490652208497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_MyTestCase.coverage" NAME="Nosetests in MyTestCase Coverage Results" MODIFIED="1490534028040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_StreamNdarrayAdapterDataStoreTestCase_test_setUpClass_tearDownClass.coverage" NAME="Nosetest StreamNdarrayAdapterDataStoreTestCase.test_setUpClass_tearDownClass Coverage Results" MODIFIED="1490645189243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_transformers.coverage" NAME="Nosetests in test_transformers Coverage Results" MODIFIED="1490652229413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$exhaustive_searcher.coverage" NAME="exhaustive_searcher Coverage Results" MODIFIED="1490652488252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/search" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_empty.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_empty Coverage Results" MODIFIED="1490541076573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_tests__1_.coverage" NAME="Nosetests in tests (1) Coverage Results" MODIFIED="1490652538712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_ExhaustiveSearcherTest_test_exhaustive_searcher__1_.coverage" NAME="Nosetest ExhaustiveSearcherTest.test_exhaustive_searcher (1) Coverage Results" MODIFIED="1490737252604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLiteTableDataStoreNdarrayTestCase_test_get_items_sorted_by_ids.coverage" NAME="Nosetest SQLiteTableDataStoreNdarrayTestCase.test_get_items_sorted_by_ids Coverage Results" MODIFIED="1490558221261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_tests.coverage" NAME="Nosetests in tests Coverage Results" MODIFIED="1493165413340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_InvertedMultiIndexSearcherTest_test_inverted_multi_index_searcher.coverage" NAME="Nosetest InvertedMultiIndexSearcherTest.test_inverted_multi_index_searcher Coverage Results" MODIFIED="1490752164871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestItertoolsUtil_test_pipeline_with_single_lambda_transformer.coverage" NAME="Nosetest TestItertoolsUtil.test_pipeline_with_single_lambda_transformer Coverage Results" MODIFIED="1490531723664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_StreamNdarrayAdapterDataStoreTestCase.coverage" NAME="Nosetests in StreamNdarrayAdapterDataStoreTestCase Coverage Results" MODIFIED="1490648306170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_SQLTabelDataStoreComputeDescriptorsTestCase_test_setUpClass_tearDownClass__1_.coverage" NAME="Nosetest SQLTabelDataStoreComputeDescriptorsTestCase.test_setUpClass_tearDownClass (1) Coverage Results" MODIFIED="1490559681887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_get_items_sorted_by_ids.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_get_items_sorted_by_ids Coverage Results" MODIFIED="1490545042074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_opencvmatrix_to_glcm__3_.coverage" NAME="Nosetest TestTransformers.test_opencvmatrix_to_glcm (3) Coverage Results" MODIFIED="1490566010289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_nearest_search.coverage" NAME="Nosetests in test_nearest_search Coverage Results" MODIFIED="1490652325553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_opencvmatrix_to_glcm.coverage" NAME="Nosetest TestTransformers.test_opencvmatrix_to_glcm Coverage Results" MODIFIED="1490566454213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_TestFileSystemDirectoryDataStore.coverage" NAME="Nosetests in TestFileSystemDirectoryDataStore Coverage Results" MODIFIED="1490574068589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_StreamNdarrayAdapterDataStoreTestCase_test_get_ids_sorted.coverage" NAME="Nosetest StreamNdarrayAdapterDataStoreTestCase.test_get_ids_sorted Coverage Results" MODIFIED="1490645726037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_empty__3_.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_empty (3) Coverage Results" MODIFIED="1490541097610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_PQQuantizerTest_test_predict.coverage" NAME="Nosetest PQQuantizerTest.test_predict Coverage Results" MODIFIED="1490573861656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$data_store.coverage" NAME="data_store Coverage Results" MODIFIED="1490537067037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_cbir_framework.coverage" NAME="Nosetests in cbir_framework Coverage Results" MODIFIED="1493215107101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_setUp_and_teaDown__1_.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_setUp_and_teaDown (1) Coverage Results" MODIFIED="1490541347896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_SQLiteTableDataStoreNdarrayTestCase.coverage" NAME="Nosetests in SQLiteTableDataStoreNdarrayTestCase Coverage Results" MODIFIED="1490562558787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestItertoolsUtil_test_pipeline_map_transformer.coverage" NAME="Nosetest TestItertoolsUtil.test_pipeline_map_transformer Coverage Results" MODIFIED="1490532864520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$test_PyMultiIndexSearcher.coverage" NAME="test_PyMultiIndexSearcher Coverage Results" MODIFIED="1490654113263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../VisualStuioProjects/Projects/MultiIndex/MultiIndex" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_sqlite_table_data_store.coverage" NAME="Nosetests in test_sqlite_table_data_store Coverage Results" MODIFIED="1490652310161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_arrays_2dims.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_arrays_2dims Coverage Results" MODIFIED="1490725293368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_PQQuantizerTest_test_clusters_shape.coverage" NAME="Nosetest PQQuantizerTest.test_clusters_shape Coverage Results" MODIFIED="1490574569161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestItertoolsUtil_test_aggregate_arrays__1_.coverage" NAME="Nosetest TestItertoolsUtil.test_aggregate_arrays (1) Coverage Results" MODIFIED="1490532253340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestItertoolsUtil_test_pipeline_empty_transformers.coverage" NAME="Nosetest TestItertoolsUtil.test_pipeline_empty_transformers Coverage Results" MODIFIED="1490532916088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_StreamNdarrayAdapterDataStoreTestCase_test_save_items_sorted_by_ids.coverage" NAME="Nosetest StreamNdarrayAdapterDataStoreTestCase.test_save_items_sorted_by_ids Coverage Results" MODIFIED="1490648302195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_iterable_2Darray_stream_with_count.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_with_count Coverage Results" MODIFIED="1490822987799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestTransformers_test_doubled.coverage" NAME="Nosetest TestTransformers.test_doubled Coverage Results" MODIFIED="1490566230423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_test_file_system_directory_data_store.coverage" NAME="Nosetests in test_file_system_directory_data_store Coverage Results" MODIFIED="1490652331242" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_SQLTabelDataStoreComputeDescriptorsTestCase__1_.coverage" NAME="Nosetests in SQLTabelDataStoreComputeDescriptorsTestCase (1) Coverage Results" MODIFIED="1490569871167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_setUp_and_teaDown.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_setUp_and_teaDown Coverage Results" MODIFIED="1490544699060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$steps.coverage" NAME="steps Coverage Results" MODIFIED="1490642116549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_IterToolsTestCase_test_aggregate_iterable_array_stream_without_count.coverage" NAME="Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_without_count Coverage Results" MODIFIED="1490822836977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_TestFileSystemDirectoryDataStore_test_empty__2_.coverage" NAME="Nosetest TestFileSystemDirectoryDataStore.test_empty (2) Coverage Results" MODIFIED="1490541068344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetests_in_PQQuantizerTest.coverage" NAME="Nosetests in PQQuantizerTest Coverage Results" MODIFIED="1490574592795" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/cbir_framework$Nosetest_PQQuantizerTest_test_predict_shape.coverage" NAME="Nosetest PQQuantizerTest.test_predict_shape Coverage Results" MODIFIED="1490574222093" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="cbir_framework" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="itertools_utils.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/itertools_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="740">
+              <caret line="40" column="92" lean-forward="false" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="transformers.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/transformer/transformers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3500">
+              <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+              <folding>
+                <marker date="1493191948000" expanded="true" signature="232:254" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="372:383" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="510:538" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="898:920" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="1309:1348" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="1927:2028" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="1958:1979" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="2660:2855" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="2694:2715" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="5362:5478" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="5391:5410" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="5510:5521" ph="..." />
+                <marker date="1493191948000" expanded="true" signature="5630:5651" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Unit Test" />
+        <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Producer</find>
+      <find>item_col</find>
+      <find>creation</find>
+      <find>norma</find>
+      <find>nclusters</find>
+      <find>int32</find>
+      <find>tee</find>
+      <find>aggregate</find>
+      <find>Searc</find>
+      <find>Search3</find>
+      <find>include</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/file_system_directory_data_store.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/449fcbc3-486f-4bf8-900f-11dca1b13b23/console_1.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/449fcbc3-486f-4bf8-900f-11dca1b13b23/console.sql" />
+        <option value="$PROJECT_DIR$/tests/test_compute_descriptors_step.py" />
+        <option value="$PROJECT_DIR$/quantizer.py" />
+        <option value="$PROJECT_DIR$/tests/test_file_system_directory_data_store.py" />
+        <option value="$PROJECT_DIR$/tests/test_sqlite_table_data_store.py" />
+        <option value="$PROJECT_DIR$/tests/test_pq_quantizer.py" />
+        <option value="$PROJECT_DIR$/kmeans_quantizer.py" />
+        <option value="$PROJECT_DIR$/pq_quantizer.py" />
+        <option value="$PROJECT_DIR$/searcher.py" />
+        <option value="$PROJECT_DIR$/nearest_search.py" />
+        <option value="$PROJECT_DIR$/tests/test_nearest_search.py" />
+        <option value="$PROJECT_DIR$/ExhaustiveSearcher.py" />
+        <option value="$PROJECT_DIR$/tests/test_exhaustive_search.py" />
+        <option value="$PROJECT_DIR$/exhaustive_searcher.py" />
+        <option value="$PROJECT_DIR$/itertools_util.py" />
+        <option value="$PROJECT_DIR$/data_store.py" />
+        <option value="$PROJECT_DIR$/sqlite_table_data_store.py" />
+        <option value="$PROJECT_DIR$/numpy_data_store.py" />
+        <option value="$PROJECT_DIR$/stream_ndarray_adapter_data_store.py" />
+        <option value="$PROJECT_DIR$/file_utils.py" />
+        <option value="$PROJECT_DIR$/searcher/exhaustive_searcher.py" />
+        <option value="$PROJECT_DIR$/search/exhaustive_searcher.py" />
+        <option value="$PROJECT_DIR$/../../VisualStuioProjects/Projects/MultiIndex/MultiIndex/test_PyMultiIndexSearcher.py" />
+        <option value="$PROJECT_DIR$/data_store/sqlite_table_datastore.py" />
+        <option value="$PROJECT_DIR$/data_store/file_system_directory_datastore.py" />
+        <option value="$PROJECT_DIR$/data_store/numpy_datastore.py" />
+        <option value="$PROJECT_DIR$/examples/find_nearest_by_histograms.ipynb" />
+        <option value="$PROJECT_DIR$/examples/import_stuff.py" />
+        <option value="$PROJECT_DIR$/tests/test_stream_ndarray_adapter_data_store.py" />
+        <option value="$PROJECT_DIR$/search/nearest_search.py" />
+        <option value="$PROJECT_DIR$/tests/test_numpy_utils.py" />
+        <option value="$PROJECT_DIR$/transformer/transformers.py" />
+        <option value="$PROJECT_DIR$/tests/test_transformers.py" />
+        <option value="$PROJECT_DIR$/tests/test_steps.py" />
+        <option value="$PROJECT_DIR$/common/numpy_utils.py" />
+        <option value="$PROJECT_DIR$/search/inverted_multiindex_searcher.py" />
+        <option value="$PROJECT_DIR$/search/inverted_multi_index_searcher.py" />
+        <option value="$PROJECT_DIR$/tests/test_exhaustive_searcher.py" />
+        <option value="$PROJECT_DIR$/search/inverted_multi_index/inverted_multi_index.pyx" />
+        <option value="$PROJECT_DIR$/tests/test_inverted_multi_index_searcher.py" />
+        <option value="$PROJECT_DIR$/steps.py" />
+        <option value="$PROJECT_DIR$/quantization/pq_quantizer.py" />
+        <option value="$PROJECT_DIR$/data_store/wrap_utils.py" />
+        <option value="$PROJECT_DIR$/examples/compute_histograms_sqlite.ipynb" />
+        <option value="$PROJECT_DIR$/examples/example_find_nearest_by_histograms_with_multi_index.ipynb" />
+        <option value="$PROJECT_DIR$/tests/test_itertools_util.py" />
+        <option value="$PROJECT_DIR$/common/wrapper_utils.py" />
+        <option value="$PROJECT_DIR$/data_store/stream_ndarray_adapter_datastore.py" />
+        <option value="$PROJECT_DIR$/common/itertools_utils.py" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cbir_framework">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cbir_framework">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="data_store">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="cbir_framework">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="common">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cbir_framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cbir_framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\common" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\transformer" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\searcher" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\quantization" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\datastore" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\search\inverted_multi_index" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\common" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\tests" />
+      <recent name="C:\Users\Dima\GoogleDisk\notebooks\cbir_framework" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Nosetests in tests">
+    <configuration default="false" name="Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_with_count" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_itertools_util.py" />
+      <option name="CLASS_NAME" value="IterToolsTestCase" />
+      <option name="METHOD_NAME" value="test_aggregate_iterable_array_stream_with_count" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_legacyInformationCopiedToNew" value="true" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetests in IterToolsTestCase" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_itertools_util.py" />
+      <option name="CLASS_NAME" value="IterToolsTestCase" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_legacyInformationCopiedToNew" value="true" />
+      <option name="_new_target" value="&quot;tests.test_itertools_util.IterToolsTestCase&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_without_count" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_itertools_util.py" />
+      <option name="CLASS_NAME" value="IterToolsTestCase" />
+      <option name="METHOD_NAME" value="test_aggregate_iterable_2Darray_stream_without_count" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_legacyInformationCopiedToNew" value="true" />
+      <option name="_new_target" value="&quot;tests.test_itertools_util.IterToolsTestCase.test_aggregate_iterable_2Darray_stream_without_count&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_with_count" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/test_itertools_util.py" />
+      <option name="CLASS_NAME" value="IterToolsTestCase" />
+      <option name="METHOD_NAME" value="test_aggregate_iterable_2Darray_stream_with_count" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_legacyInformationCopiedToNew" value="true" />
+      <option name="_new_target" value="&quot;tests.test_itertools_util.IterToolsTestCase.test_aggregate_iterable_2Darray_stream_with_count&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Nosetests in tests" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="cbir_framework" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_with_count" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in IterToolsTestCase" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_without_count" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_with_count" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in tests" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Nosetests in tests" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_with_count" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Nosetest IterToolsTestCase.test_aggregate_iterable_2Darray_stream_without_count" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Nosetests in IterToolsTestCase" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_with_count" />
+      </list>
+    </recent_temporary>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="cbir_framework" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="330d7d92-7a24-4680-8427-6531ccb9e54d" name="Default" comment="" />
+      <created>1490529933622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1490529933622</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial">
+      <created>1490814685280</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1490814685280</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add tests">
+      <created>1493167421011</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493167421011</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Nosetest_IterToolsTestCase_test_aggregate_iterable_array_stream_with_count - 2017.03.29 at 23h 27m 57s.xml">
+      <configuration name="Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_with_count" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetest_IterToolsTestCase_test_aggregate_iterable_array_stream_without_count - 2017.03.29 at 23h 20m 24s.xml">
+      <configuration name="Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_without_count" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetest_IterToolsTestCase_test_aggregate_iterable_array_stream_without_count - 2017.03.29 at 23h 27m 17s.xml">
+      <configuration name="Nosetest IterToolsTestCase.test_aggregate_iterable_array_stream_without_count" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetest_IterToolsTestCase_test_aggregate_iterable_int_range - 2017.03.29 at 23h 17m 19s.xml">
+      <configuration name="Nosetest IterToolsTestCase.test_aggregate_iterable_int_range" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetest_IterToolsTestCase_test_aggregate_iterable_int_range - 2017.03.29 at 23h 17m 30s.xml">
+      <configuration name="Nosetest IterToolsTestCase.test_aggregate_iterable_int_range" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetest_IterToolsTestCase_test_aggregate_iterable_int_range_with_count - 2017.03.29 at 23h 17m 54s.xml">
+      <configuration name="Nosetest IterToolsTestCase.test_aggregate_iterable_int_range_with_count" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_IterToolsTestCase - 2017.03.29 at 23h 28m 54s.xml">
+      <configuration name="Nosetests in IterToolsTestCase" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_cbir_framework - 2017.04.26 at 16h 59m 37s.xml">
+      <configuration name="Nosetests in cbir_framework" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_tests - 2017.04.26 at 02h 10m 06s.xml">
+      <configuration name="Nosetests in tests" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_tests - 2017.04.26 at 02h 10m 22s.xml">
+      <configuration name="Nosetests in tests" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.375" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3300866" sideWeight="0.49375" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.625" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987013" sideWeight="0.5442431" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23160173" sideWeight="0.3944563" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23160173" sideWeight="0.60554373" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14925373" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0015625" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2987013" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="initial" />
+    <MESSAGE value="add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_pq_quantizer.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_pq_quantizer.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_steps.py</url>
+          <line>104</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_store/stream_ndarray_adapter_datastore.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../VisualStuioProjects/Projects/MultiIndex/MultiIndex/test_PyMultiIndexSearcher.py</url>
+          <line>57</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/data_store/numpy_datastore.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_steps.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_exhaustive_searcher.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_inverted_multi_index_searcher.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_itertools_util.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/common/itertools_utils.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="51" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tests/test_sqlite_table_data_store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_pq_quantizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_nearest_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../VisualStuioProjects/Projects/MultiIndex/MultiIndex/test_PyMultiIndexSearcher.py" />
+    <entry file="file://$PROJECT_DIR$/../../VisualStuioProjects/Projects/MultiIndex/MultiIndex/inverted_multi_index.pyx" />
+    <entry file="file://$PROJECT_DIR$/data_store/sqlite_table_datastore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../numpy_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/file_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/find_nearest_by_histograms.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_store/datastore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/import_hack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1013586911/numpy/core/multiarray.py" />
+    <entry file="file://C:/Anaconda3/Lib/site-packages/numpy/core/numeric.py" />
+    <entry file="file://$PROJECT_DIR$/data_store/file_system_directory_datastore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Anaconda3/Lib/site-packages/pandas/core/series.py" />
+    <entry file="file://$PROJECT_DIR$/data_store/numpy_datastore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_numpy_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_transformers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/inverted_multiindex_searcher.py" />
+    <entry file="file://$PROJECT_DIR$/search/inverted_multi_index/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_stream_ndarray_adapter_data_store.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/inverted_multi_index/inverted_multi_index.pyx" />
+    <entry file="file://$PROJECT_DIR$/tests/test_steps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_store/wrap_utils.py" />
+    <entry file="file://$PROJECT_DIR$/examples/compute_histograms_sqlite.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/example_find_nearest_by_histograms_with_multi_index.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.3/system/python_stubs/1013586911/builtins.py" />
+    <entry file="file://C:/Anaconda3/Lib/unittest/case.py" />
+    <entry file="file://$PROJECT_DIR$/tests/test_itertools_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="60" column="32" lean-forward="false" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantization/pq_quantizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quantization/quantizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_store/datastore_ndarray_adapter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/wrapper_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_exhaustive_searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="15" column="10" lean-forward="false" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/steps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transformer/transformers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3500">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding>
+            <marker date="1493191948000" expanded="true" signature="232:254" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="372:383" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="510:538" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="898:920" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="1309:1348" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="1927:2028" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="1958:1979" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="2660:2855" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="2694:2715" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="5362:5478" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="5391:5410" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="5510:5521" ph="..." />
+            <marker date="1493191948000" expanded="true" signature="5630:5651" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_store/stream_ndarray_adapter_datastore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="39" lean-forward="false" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#16#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_inverted_multi_index_searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/inverted_multi_index_searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/nearest_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search/exhaustive_searcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/numpy_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1071">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/cbir_framework.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/itertools_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="40" column="92" lean-forward="false" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
