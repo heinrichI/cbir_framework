@@ -11,7 +11,7 @@ class StreamNdarrayAdapterDataStore(datastore.DataStore):
         adapts data_store that works with streams to work with ndarrays
     """
 
-    def __init__(self, stream_data_store: datastore.DataStore):
+    def __init__(self, stream_data_store: datastore.DataStore, detect_final_shape_by_first_elem=False, shape=None):
         if not stream_data_store.is_stream_data_store():
             self.get_count = stream_data_store.get_count
             self.get_ids_sorted = stream_data_store.get_ids_sorted
@@ -19,6 +19,8 @@ class StreamNdarrayAdapterDataStore(datastore.DataStore):
             self.save_items_sorted_by_ids = stream_data_store.save_items_sorted_by_ids
         else:
             self.stream_data_store = stream_data_store
+            self.detect_final_shape_by_first_elem = detect_final_shape_by_first_elem
+            self.shape = shape
 
     def get_count(self):
         with ExitStack() as stack:
@@ -40,7 +42,10 @@ class StreamNdarrayAdapterDataStore(datastore.DataStore):
                 count_ = self.stream_data_store.get_count()
 
             items_sorted_by_ids_stream = self.stream_data_store.get_items_sorted_by_ids(ids_sorted_stream)
-            items_sorted_by_ids_ndarray = aggregate_iterable(items_sorted_by_ids_stream, count_)
+            items_sorted_by_ids_ndarray = aggregate_iterable(items_sorted_by_ids_stream,
+                                                             detect_final_shape_by_first_elem=self.detect_final_shape_by_first_elem,
+                                                             final_shape=self.shape,
+                                                             n_elements=count_)
 
             return items_sorted_by_ids_ndarray
 
@@ -64,7 +69,10 @@ class StreamNdarrayAdapterDataStore(datastore.DataStore):
                 stack.enter_context(self.stream_data_store)
             ids_sorted = self.stream_data_store.get_ids_sorted()
             count_ = self.stream_data_store.get_count()
-            ids_sorted_ndarray = aggregate_iterable(ids_sorted, count_)
+            ids_sorted_ndarray = aggregate_iterable(ids_sorted,
+                                                    detect_final_shape_by_first_elem=self.detect_final_shape_by_first_elem,
+                                                    final_shape=self.shape, n_elements=count_)
+
             return ids_sorted_ndarray
 
     def is_stream_data_store(self):

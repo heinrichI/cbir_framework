@@ -34,14 +34,14 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
     def test_get_count(self):
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
                                            StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
-        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds)
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True)
         count_ = adapter_ds.get_count()
         self.assertEqual(len(StreamNdarrayAdapterDataStoreTestCase.items), count_)
 
     def test_get_ids_sorted(self):
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
                                            StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
-        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds)
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True)
         ids_sorted = adapter_ds.get_ids_sorted()
         truth_ids = np.arange(len(StreamNdarrayAdapterDataStoreTestCase.items)) + 1
         self.assertTrue((truth_ids == ids_sorted).all())
@@ -49,7 +49,7 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
     def test_get_items_sorted_by_ids(self):
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
                                            StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
-        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds)
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True)
         items_sorted_by_ids = adapter_ds.get_items_sorted_by_ids()
         self.assertTrue((StreamNdarrayAdapterDataStoreTestCase.items == items_sorted_by_ids).all())
 
@@ -57,14 +57,14 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
 
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
                                            StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
-        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds)
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True)
         items_sorted_by_ids = adapter_ds.get_items_sorted_by_ids()
         self.assertTrue((StreamNdarrayAdapterDataStoreTestCase.items == items_sorted_by_ids).all())
 
     def test_save_items_sorted_by_ids(self):
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
                                            StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
-        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds)
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True)
 
         adapter_ds.save_items_sorted_by_ids(StreamNdarrayAdapterDataStoreTestCase.items)
 
@@ -76,7 +76,7 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
     def test_save_items_sorted_by_ids_particular_ids(self):
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
                                            StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
-        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds)
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True)
 
         ids_sorted = np.arange(1, len(StreamNdarrayAdapterDataStoreTestCase.items) + 1) * 2
         adapter_ds.save_items_sorted_by_ids(StreamNdarrayAdapterDataStoreTestCase.items, ids_sorted)

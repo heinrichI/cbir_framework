@@ -102,7 +102,7 @@ class SQLTabelDataStoreComputeDescriptorsTestCase(unittest.TestCase):
 
         with sqltable_out_ds:
             cluster_centers = sqltable_out_ds.get_items_sorted_by_ids()
-            cluster_centers_ndarray = aggregate_iterable(cluster_centers)
+            cluster_centers_ndarray = aggregate_iterable(cluster_centers, detect_final_shape_by_first_elem=True)
             truth_shape = (2, 4, 4)
             self.assertEquals(cluster_centers_ndarray.shape, truth_shape)
 

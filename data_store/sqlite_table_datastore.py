@@ -2,32 +2,11 @@ import collections
 import io
 import itertools
 import sqlite3
+from common.sqlite_utils import adapt_array, adapt_npint, convert_array
 
 import numpy as np
 
 from data_store.datastore import DataStore
-
-
-def adapt_array(arr):
-    """
-    http://stackoverflow.com/a/31312102/190597 (SoulNibbler)
-    """
-    out = io.BytesIO()
-    np.save(out, arr)
-    out.seek(0)
-    return sqlite3.Binary(out.read())
-
-
-def adapt_npint(npint):
-    pythonint = int(npint)
-    return pythonint
-
-
-def convert_array(text):
-    out = io.BytesIO(text)
-    out.seek(0)
-    return np.load(out)
-
 
 def get_two_sqlite_data_stores(db_path, table1_name, table2_name, item_column_type="ndarray"):
     sqltable_ds1 = SQLiteTableDataStore(db_path=db_path, table_name=table1_name, item_column_type=item_column_type)

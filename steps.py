@@ -39,7 +39,7 @@ def sampling_step(data_store_in: DataStore, sample_part, data_store_out: DataSto
         count_ = data_store_in.get_count()
         sample_size = int(count_ * sample_part)
 
-        ds_ndarray_in = StreamNdarrayAdapterDataStore(data_store_in)
+        ds_ndarray_in = StreamNdarrayAdapterDataStore(data_store_in, detect_final_shape_by_first_elem=True)
         ids_sorted_ndarray = ds_ndarray_in.get_ids_sorted()
         id_ndarray_sample = np.random.choice(ids_sorted_ndarray, sample_size, replace=False)
         id_ndarray_sample.sort()
@@ -47,7 +47,7 @@ def sampling_step(data_store_in: DataStore, sample_part, data_store_out: DataSto
 
         sample_items_sorted_by_ids = ds_ndarray_in.get_items_sorted_by_ids(id_ndarray_sample_sorted)
 
-        ds_ndarray_out = StreamNdarrayAdapterDataStore(data_store_out)
+        ds_ndarray_out = StreamNdarrayAdapterDataStore(data_store_out, detect_final_shape_by_first_elem=True)
         ds_ndarray_out.save_items_sorted_by_ids(sample_items_sorted_by_ids)
 
 
@@ -62,12 +62,12 @@ def quantize_step(data_store_in: DataStore, quantizer: Quantizer, data_store_out
         if hasattr(data_store_out, '__enter__'):
             stack.enter_context(data_store_out)
 
-        ds_ndarray_in = StreamNdarrayAdapterDataStore(data_store_in)
+        ds_ndarray_in = StreamNdarrayAdapterDataStore(data_store_in, detect_final_shape_by_first_elem=True)
         items_ndarray = ds_ndarray_in.get_items_sorted_by_ids()
         quantizer.fit(items_ndarray)
         cluster_centers_ndarray = quantizer.get_cluster_centers()
 
-        ds_ndarray_out = StreamNdarrayAdapterDataStore(data_store_out)
+        ds_ndarray_out = StreamNdarrayAdapterDataStore(data_store_out, detect_final_shape_by_first_elem=True)
         ds_ndarray_out.save_items_sorted_by_ids(cluster_centers_ndarray)
 
 
