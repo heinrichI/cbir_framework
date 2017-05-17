@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.cluster import KMeans
-
 from quantization.quantizer import Quantizer
+from quantization import py_multi_index_util as pymiu
 
 
 class PQQuantizer(Quantizer):
@@ -13,6 +13,7 @@ class PQQuantizer(Quantizer):
         self.precompute_distances = precompute_distances
         self.n_init = n_init
         self.max_iter = max_iter
+        self.py_multi_index_util = pymiu.PyMultiIndexUtil(n_quantizers, n_clusters)
 
     def fit(self, X: np.ndarray):
         self.subvector_length = len(X[0]) // self.n_quantizers
@@ -33,7 +34,27 @@ class PQQuantizer(Quantizer):
         ))
         return cluster_centers
 
-    def predict(self, X):
+    def predict(self, X: np.ndarray):
+        """
+            X - matrix, rows: vectors
+            get cluster indices for vectors in X
+            X: [
+                [x00,x01],
+                [x10,x11],
+                ...
+            ]
+            returns:
+            [
+                i0,
+                i1,
+                ...
+            ]
+        """
+        subspace_indices = self.predict_subspace_indices(X)
+        indices = self.py_multi_index_util.flat_indices(subspace_indices)
+        return indices
+
+    def predict_subspace_indices(self, X):
         """
             X - matrix, rows: vectors
             get cluster indices for vectors in X
@@ -59,6 +80,23 @@ class PQQuantizer(Quantizer):
             centroid_indexes = subquantizer.predict(subvectors)
             centroids[:, i] = centroid_indexes
 
-
         # centroids = centroids
         return centroids
+
+
+"""
+ self.flatindex_multipliers = np.ones((n_quantizers))
+        for i in range(n_quantizers - 2, -1, -1):
+            self.flatindex_multipliers[i] = self.flatindex_multipliers[i + 1] * n_clusters
+
+ subspace_indices = self.predict_subspace_indices(X)
+        n = X.shape[0]
+        flat_indices = np.empty(n)
+        for i, subspaces_index in enumerate(subspace_indices):
+            flatindex = 0
+            for dim in range(len(self.flatindex_multipliers)):
+                flatindex += subspaces_index[dim] * self.flatindex_multipliers[dim]
+            flat_indices[i] = flatindex
+
+        return flat_indices
+"""

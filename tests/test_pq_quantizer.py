@@ -20,18 +20,23 @@ class PQQuantizerTest(unittest.TestCase):
         cls.quantizer = PQQuantizer(2, 2)
         cls.quantizer.fit(cls.X)
 
-    def test_predict_shape(self):
-        predicted_base_vectors = PQQuantizerTest.quantizer.predict(PQQuantizerTest.X)
+    def test_predict_subspace_indices_shape(self):
+        predicted_base_vectors = PQQuantizerTest.quantizer.predict_subspace_indices(PQQuantizerTest.X)
         predicted_base_vectors_shape = predicted_base_vectors.shape
         truth_shape = (4, 2)
-        self.assertEquals(predicted_base_vectors_shape, truth_shape)
+        self.assertEqual(predicted_base_vectors_shape, truth_shape)
 
     def test_clusters_shape(self):
         cluster_centers = PQQuantizerTest.quantizer.get_cluster_centers()
         cluster_centers_shape = cluster_centers.shape
         truth_shape = (2, 2, 2)
-        self.assertEquals(cluster_centers_shape, truth_shape)
+        self.assertEqual(cluster_centers_shape, truth_shape)
 
+    def test_predict_shape(self):
+        predicted_base_vectors = PQQuantizerTest.quantizer.predict(PQQuantizerTest.X)
+        predicted_base_vectors_shape = predicted_base_vectors.shape
+        truth_shape = (4,)
+        self.assertEqual(predicted_base_vectors_shape, truth_shape)
 
 if __name__ == '__main__':
     unittest.main()
