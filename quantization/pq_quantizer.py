@@ -58,5 +58,7 @@ class PQQuantizer(Quantizer):
             # print("subvectorsshape", subvectors.shape)
             centroid_indexes = subquantizer.predict(subvectors)
             centroids[:, i] = centroid_indexes
+
+
         # centroids = centroids
         return centroids

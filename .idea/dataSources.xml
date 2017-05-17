@@ -45,13 +45,32 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="example_compute_siftid_sift_imgid_samples-0" uuid="f2a60dc8-33f6-4080-bed4-160b80ad4b82">
+    <data-source source="LOCAL" name="example_compute_siftid_sift_imgid_samples0" uuid="2b1620a6-8844-47cc-940e-ae7ff67f558b">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\example_compute_siftid_sift_imgid_samples-0.3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\ds_data\example_compute_siftid_sift_imgid_samples0.1-clusters</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/sqlite-jdbc-3.16.1.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/xerial-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="example_compute_siftid_sift_imgid_samples0 [2]" uuid="b94448b7-5d90-4059-9dc5-5917db365c94">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>SQLite</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\ds_data\example_compute_siftid_sift_imgid_samples0.1-clusters2</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
