@@ -3,7 +3,7 @@ import collections
 import cv2;
 import numpy as np
 from skimage.feature import greycomatrix
-import pandas as ps
+import sklearn.preprocessing as preprocessing
 import common.numpy_utils as npu
 from quantization.pq_quantizer import PQQuantizer
 
@@ -59,6 +59,13 @@ def arrays_to_productbincount(arrays: np.ndarray, pq_quantizer: PQQuantizer):
     final_bincout = product_bincout.ravel()
     # print(final_bincout.shape)
     return final_bincout
+
+
+def normalize_array(arr: np.ndarray, norm='l2'):
+    arr_ = arr.reshape((1, -1))
+    normalized_arr = preprocessing.normalize(arr_, norm=norm)
+    normalized_arr = normalized_arr.reshape(arr.shape)
+    return normalized_arr
 
 
 class ItemsTransformer():
@@ -175,6 +182,11 @@ class TranslateByKeysTransformer(ItemsTransformer):
     def transform(self, items: np.ndarray):
         return npu.translate_matrix_by_keys(self.keys, self.values, items)
 
+
+class ArrayNormalizer(ParametrizedItemsTransformer):
+    def __init__(self, norm):
+        self.norm = norm
+        super().__init__(normalize_array, norm)
 
 def get_ids_array_sample(ids: np.ndarray, fraction: float):
     size = int(len(ids) * fraction)
