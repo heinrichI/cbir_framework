@@ -65,12 +65,11 @@ class PQQuantizer(Quantizer):
             ]
             returns:
             [
-                [u0, v0],
-                [u1, v1],
-                ...
+                [u0, u1, ..., u_len(X)],
+                [v0, v1, ..., v_len(X)]
             ]
         """
-        centroids = np.empty(shape=(len(X), self.n_quantizers), dtype=np.int32)
+        centroids = np.empty(shape=( self.n_quantizers, len(X)), dtype=np.int32)
         self.subvector_length = len(X[0]) // self.n_quantizers
         X = X.reshape((len(X), self.n_quantizers, self.subvector_length))
         for i in range(self.n_quantizers):
@@ -78,7 +77,7 @@ class PQQuantizer(Quantizer):
             subquantizer = self.subquantizers[i]
             # print("subvectorsshape", subvectors.shape)
             centroid_indexes = subquantizer.predict(subvectors)
-            centroids[:, i] = centroid_indexes
+            centroids[i, :] = centroid_indexes
 
         # centroids = centroids
         return centroids

@@ -5,6 +5,7 @@ import numpy as np
 from skimage.feature import greycomatrix
 import pandas as ps
 import common.numpy_utils as npu
+from quantization.pq_quantizer import PQQuantizer
 
 
 # debug_print_wrap = debug_print.debug_print_wrap
@@ -47,15 +48,16 @@ def opencvmatrix_to_glcm(matrix: np.ndarray, normalize=True, levels=256):
     return glcm
 
 
-def siftsset_to_bovwbincount(siftsset, quantizer, nclusters):
-    indices_arr = quantizer(siftsset)
+def arrays_to_productbincount(arrays: np.ndarray, pq_quantizer: PQQuantizer):
+    subspaced_indices_arr = pq_quantizer.predict_subspace_indices(arrays)
 
+    n_subspaces = subspaced_indices_arr.shape[0]
     # bincount = np.bincount(indices, minlength=nclusters)
-    final_bincout = np.empty((len(indices_arr), nclusters))
-    for i in range(len(indices_arr)):
-        final_bincout[i] = np.bincount(indices_arr[i], minlength=nclusters)
-    final_bincout = final_bincout.ravel()
-    print(final_bincout.shape)
+    product_bincout = np.empty((n_subspaces, pq_quantizer.n_clusters))
+    for i in range(n_subspaces):
+        product_bincout[i] = np.bincount(subspaced_indices_arr[i], minlength=pq_quantizer.n_clusters)
+    final_bincout = product_bincout.ravel()
+    # print(final_bincout.shape)
     return final_bincout
 
 
@@ -71,7 +73,7 @@ class ItemsTransformer():
 
 
 class TransformerWithParams:
-    def getParamsInfo():
+    def getParamsInfo(self):
         pass
 
 
@@ -146,14 +148,13 @@ class NdarrayToNdarray(ItemsTransformer):
         return item.reshape(self.result_shape)
 
 
-class SiftsSetToBovwBinCount(ItemsTransformer):
-    def __init__(self, quantizer, nclusters):
-        self.quantizer = quantizer
-        self.nclusters = nclusters
-        self.siftsset_to_bovwbincount = siftsset_to_bovwbincount
+class ArraysToProductBinCount(ItemsTransformer):
+    def __init__(self, pq_quantizer: PQQuantizer):
+        self.pq_quantizer = pq_quantizer
+        self.siftsset_to_productbovwbincount = arrays_to_productbincount
 
     def transform_item(self, item):
-        return siftsset_to_bovwbincount(item, self.quantizer, self.nclusters)
+        return arrays_to_productbincount(item, self.pq_quantizer)
 
 
 class ParametrizedItemsTransformer(ItemsTransformer):
