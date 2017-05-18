@@ -87,14 +87,15 @@ class PQQuantizer(Quantizer):
 def restore_from_clusters(subspaced_clusters: np.ndarray) -> PQQuantizer:
     n_subspaces = subspaced_clusters.shape[0]
     n_clusters = subspaced_clusters.shape[1]
-    #need to preserve order of clusters. Assuming n_init=1, max_iter=0 leads to such preserving
+    #need to preserve order of clusters. Assuming n_init=1, max_iter=0, init=ndarray leads to such preserving
     pq_quantizer = PQQuantizer(n_clusters=n_clusters, n_quantizers=n_subspaces, n_init=1, max_iter=0)
     subvector_length = subspaced_clusters.shape[2]
     for i in range(n_subspaces):
         subclusters = subspaced_clusters[i]
-        kmeans = KMeans(n_clusters=n_subspaces, precompute_distances='auto',
+        print(subclusters.shape)
+        kmeans = KMeans(n_clusters=n_clusters, precompute_distances='auto',
                         n_jobs=1, max_iter=1, n_init=1,
-                        verbose=True).fit(subclusters)
+                        verbose=True, init=subclusters).fit(subclusters)
         pq_quantizer.subquantizers.append(kmeans)
     return pq_quantizer
 

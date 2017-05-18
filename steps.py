@@ -82,7 +82,7 @@ def search_step(data_store_in: DataStore, searcher_: Searcher, n_nearest, data_s
         if hasattr(data_store_out, '__enter__'):
             stack.enter_context(data_store_out)
 
-        ds_ndarray_in = StreamNdarrayAdapterDataStore(data_store_in)
+        ds_ndarray_in = StreamNdarrayAdapterDataStore(data_store_in, detect_final_shape_by_first_elem=True)
         items_ndarray = ds_ndarray_in.get_items_sorted_by_ids()
 
         nearest_ids_ndarray = searcher_.find_nearest_ids(items_ndarray, n_nearest)
