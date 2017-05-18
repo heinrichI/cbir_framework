@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from quantization.pq_quantizer import PQQuantizer
+from quantization.pq_quantizer import PQQuantizer, restore_from_clusters
 
 
 class PQQuantizerTest(unittest.TestCase):
@@ -23,7 +23,7 @@ class PQQuantizerTest(unittest.TestCase):
     def test_predict_subspace_indices_shape(self):
         predicted_base_vectors = PQQuantizerTest.quantizer.predict_subspace_indices(PQQuantizerTest.X)
         predicted_base_vectors_shape = predicted_base_vectors.shape
-        truth_shape = (4, 2)
+        truth_shape = (2, 4)
         self.assertEqual(predicted_base_vectors_shape, truth_shape)
 
     def test_clusters_shape(self):
@@ -37,6 +37,13 @@ class PQQuantizerTest(unittest.TestCase):
         predicted_base_vectors_shape = predicted_base_vectors.shape
         truth_shape = (4,)
         self.assertEqual(predicted_base_vectors_shape, truth_shape)
+
+    def test_restore_from_clusters(self):
+        cluster_centers = PQQuantizerTest.quantizer.get_cluster_centers()
+        pq_quantizer_restored = restore_from_clusters(cluster_centers)
+        clusters_restored = pq_quantizer_restored.get_cluster_centers()
+        self.assertEqual(clusters_restored.shape, cluster_centers.shape)
+
 
 if __name__ == '__main__':
     unittest.main()

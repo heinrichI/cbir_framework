@@ -16,9 +16,9 @@ class PQQuantizer(Quantizer):
         self.py_multi_index_util = pymiu.PyMultiIndexUtil(n_quantizers, n_clusters)
 
     def fit(self, X: np.ndarray):
-        self.subvector_length = len(X[0]) // self.n_quantizers
-        # print(self.subvector_length)
-        X = X.reshape((len(X), self.n_quantizers, self.subvector_length))
+        subvector_length = len(X[0]) // self.n_quantizers
+        # print(subvector_length)
+        X = X.reshape((len(X), self.n_quantizers, subvector_length))
         for i in range(self.n_quantizers):
             subvectors = X[:, i, :]
             # subvectors = np.copy(X[:, i, :], order='C')
@@ -50,11 +50,12 @@ class PQQuantizer(Quantizer):
                 ...
             ]
         """
-        subspace_indices = self.predict_subspace_indices(X)
-        indices = self.py_multi_index_util.flat_indices(subspace_indices)
+        subspaced_indices = self.predict_subspace_indices(X)
+        subspace_indices_ = np.transpose(subspaced_indices).astype(dtype=subspaced_indices.dtype, order='C')
+        indices = self.py_multi_index_util.flat_indices(subspace_indices_)
         return indices
 
-    def predict_subspace_indices(self, X):
+    def predict_subspace_indices(self, X) -> np.ndarray:
         """
             X - matrix, rows: vectors
             get cluster indices for vectors in X
@@ -69,9 +70,9 @@ class PQQuantizer(Quantizer):
                 [v0, v1, ..., v_len(X)]
             ]
         """
-        centroids = np.empty(shape=( self.n_quantizers, len(X)), dtype=np.int32)
-        self.subvector_length = len(X[0]) // self.n_quantizers
-        X = X.reshape((len(X), self.n_quantizers, self.subvector_length))
+        centroids = np.empty(shape=(self.n_quantizers, len(X)), dtype=np.int32)
+        subvector_length = len(X[0]) // self.n_quantizers
+        X = X.reshape((len(X), self.n_quantizers, subvector_length))
         for i in range(self.n_quantizers):
             subvectors = X[:, i, :]
             subquantizer = self.subquantizers[i]
@@ -81,6 +82,21 @@ class PQQuantizer(Quantizer):
 
         # centroids = centroids
         return centroids
+
+
+def restore_from_clusters(subspaced_clusters: np.ndarray) -> PQQuantizer:
+    n_subspaces = subspaced_clusters.shape[0]
+    n_clusters = subspaced_clusters.shape[1]
+    #need to preserve order of clusters. Assuming n_init=1, max_iter=0 leads to such preserving
+    pq_quantizer = PQQuantizer(n_clusters=n_clusters, n_quantizers=n_subspaces, n_init=1, max_iter=0)
+    subvector_length = subspaced_clusters.shape[2]
+    for i in range(n_subspaces):
+        subclusters = subspaced_clusters[i]
+        kmeans = KMeans(n_clusters=n_subspaces, precompute_distances='auto',
+                        n_jobs=1, max_iter=1, n_init=1,
+                        verbose=True).fit(subclusters)
+        pq_quantizer.subquantizers.append(kmeans)
+    return pq_quantizer
 
 
 """
