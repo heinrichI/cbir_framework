@@ -1,3 +1,24 @@
+Framework represents CBIR as several steps:
+- Transformation(computing descriptors, any array manipultaions)
+- Sampling(frequent step before quantization)
+- Quantization
+- Search
+- Search evaluation, plotting
+
+All steps (except plotting) are designed in flavour of pipeline:
+each step has input data store and output data store and in transformation step you can even imitate real pipeline
+chaining transformers.
+
+To add new type of descriptor you need add your <transformer.py> which must implement method like 'transform_item', then you can easily pass it to
+transformation step and compute descriptors of new type you need.
+
+Similar situtaion with data stores. There are already implementations like SQLiteDataStore, CSVFileDataStore, NumpyDataStore.
+You can add your <data_store.py> which must implement several methods like 'get_items_sorted_by_ids' and then pass it to
+any step in your cbir pipeline.
+
+(Note that there is considerable mess with way of getting data, processing and saving it. There were intentions to process data in
+stream-like style, but its has led to unpleasant restrictions and time-perfomance issues.)
+
 # Search
 4 types of search are supported:
 * exhaustive
