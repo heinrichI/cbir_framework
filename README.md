@@ -1,8 +1,8 @@
 # cbir_framework
 
 Framework represents CBIR as several steps:
-- Transformation(computing descriptors, any array manipultaions)
-- Sampling(frequent step before quantization)
+- Transformation (computing descriptors, any array manipultaions)
+- Sampling (frequent step before quantization)
 - Quantization
 - Search
 - Search evaluation, plotting
@@ -25,7 +25,7 @@ Framwork depends on python modules in [inverted_multi_index prjoect](https://git
 It utilizes them for fast (I hope) vector operations, building inverted multi-index, perfoming inverted multi-index search,
 exhaustive search with SDC and ADC distance computations.
 
-Here goes major steps and exampes os them.
+Here goes major steps and examples os them.
 
 # Descriptors computation
 * <a name="global_descriptors">global descriptors</a>
@@ -42,7 +42,7 @@ Here goes major steps and exampes os them.
 # Sampling
 It`s often enough to quantize only sample from descriptors.
 
-[Example(sampling sifts)](/examples/notebooks/sampling.ipynb).
+[Example (sampling sifts)->](/examples/notebooks/sampling.ipynb).
 
 # Search
 4 types of search are supported:
