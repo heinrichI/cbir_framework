@@ -310,7 +310,7 @@ def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, title='', 
     filled_markers = itertools.cycle(('o', 'v', 's', 'p', '*', '<', 'h', '>', 'H', 'D', 'd', 'P', '^', 'X'))
     for i, label_x_y_ in enumerate(label_x_y, 0):
         label = label_x_y_[0]
-        x = label_x_y_[1]
+        x = np.array(label_x_y_[1])
         y = label_x_y_[2]
         if label__kwargs is not None:
             kwargs = label__kwargs.get(label, {})
