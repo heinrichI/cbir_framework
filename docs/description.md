@@ -5,22 +5,22 @@
 * adc exhaustive
 * inverted multi-index
 
-#### Exhaustive search
+### Exhaustive search
 requires:
 - [global descriptors](#global_descriptors)
 
-#### SDC exhaustive search
+### SDC exhaustive search
 requires:
 - [centroids](#centroids)
 - [pq codes](#pq_codes)
 - [centroids pairwise distances](#centroids_pairwise_distances)
 
-#### ADC exhaustive search
+### ADC exhaustive search
 requires:
 - [centroids](#centroids)
 - [pq codes](#pq_codes)
 
-#### Inverted multi-index search
+### Inverted multi-index search
 requires:
 - [centroids](#centroids)
 - [pq codes](#pq_codes)
@@ -28,28 +28,28 @@ requires:
 
 # Descriptors computation
 * <a name="global_descriptors">global descriptors</a>
-    * [compute from image](examples/notebooks/compute_global_descriptors_from_image.ipynb)
-    * [compute from local descriptors](examples/notebooks/compute_global_descriptors_from_local_descriptors.ipynb)
+    * [compute from image](/examples/notebooks/compute_global_descriptors_from_image.ipynb)
+    * [compute from local descriptors](/examples/notebooks/compute_global_descriptors_from_local_descriptors.ipynb)
 * local descriptors
-    * [compute from image](examples/notebooks/compute_local_descriptors_from_image.ipynb)
+    * [compute from image](/examples/notebooks/compute_local_descriptors_from_image.ipynb)
 
 # Quantization
-* finding <a name="centroids">[centroids](examples/notebooks/finding_centroids.ipynb)</a>
-* quantizing global descriptors to <a name="pq codes">[pq codes](examples/notebooks/quantize_global_descriptors_to_pqcodes.ipynb)</a>
-* finding <a name="centroids_pairwise_distances">[centroids pairwise distances](examples/notebooks/compute_centroids_pairwise_distances.ipynb)</a>
+* finding <a name="centroids">[centroids](/examples/notebooks/finding_centroids.ipynb)</a>
+* quantizing global descriptors to <a name="pq codes">[pq codes](/examples/notebooks/quantize_global_descriptors_to_pqcodes.ipynb)</a>
+* finding <a name="centroids_pairwise_distances">[centroids pairwise distances](/examples/notebooks/compute_centroids_pairwise_distances.ipynb)</a>
 
 # Sampling
 It`s often enough to quantize only sample from descriptors.
 
-[Example(sampling sifts)](examples/notebooks/sampling.ipynb).
+[Example(sampling sifts)](/examples/notebooks/sampling.ipynb).
 
 # Evaluation
 Step to evaluate search perfomance
 
-[Example](examples/notebooks/evaluate_search.ipynb).
+[Example](/examples/notebooks/evaluate_search.ipynb).
 
 # Plotting
-* compare descriptors for exhaustive search [->](examples/notebooks/plotting/plot_exhaustive_search_perfomance_n_nearest.ipynb)
-* compare memory for descriptors for exhaustive search [->](examples/notebooks/plotting/plot_exhaustive_search_perfomance_memory.ipynb)
-* compare quantization parameters for pq search techniques(adc, sdc, imi) [->](examples/notebooks/plotting/plot_search_perfomance_pq_params.ipynb)
-* compare pq search types(adc, sdc, imi) [->](examples/notebooks/plotting/plot_search_perfomance_search_types.ipynb)
+* compare descriptors for exhaustive search [Example->](/examples/notebooks/plotting/plot_exhaustive_search_perfomance_n_nearest.ipynb)
+* compare memory for descriptors for exhaustive search [->](/examples/notebooks/plotting/plot_exhaustive_search_perfomance_memory.ipynb)
+* compare quantization parameters for pq search techniques(adc, sdc, imi) [Example->](/examples/notebooks/plotting/plot_search_perfomance_pq_params.ipynb)
+* compare pq search types(adc, sdc, imi) [Example->](/examples/notebooks/plotting/plot_search_perfomance_search_types.ipynb)
