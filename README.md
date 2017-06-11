@@ -1,3 +1,5 @@
+# cbir_framework
+
 Framework represents CBIR as several steps:
 - Transformation(computing descriptors, any array manipultaions)
 - Sampling(frequent step before quantization)
