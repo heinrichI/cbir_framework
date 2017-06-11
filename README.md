@@ -19,6 +19,29 @@ any step in your cbir pipeline.
 (Note that there is considerable mess with way of getting data, processing and saving it. There were intentions to process data in
 stream-like style, but its has led to unpleasant restrictions and time-perfomance issues.)
 
+Framwork depends on python modules in [inverted_multi_index prjoect](https://github.com/DIMAthe47/inverted_multi_index).
+It utilizes them for fast (I hope) vector operations, building inverted multi-index, perfoming inverted multi-index search,
+exhaustive search with SDC and ADC distance computations.
+
+Here goes major steps and exampes os them.
+
+# Descriptors computation
+* <a name="global_descriptors">global descriptors</a>
+    * [compute from image](/examples/notebooks/descriptors_computation/compute_global_descriptors_from_image.ipynb)
+    * [compute from local descriptors (sift set -> BOVW)](/examples/notebooks/descriptors_computation/compute_global_descriptors_from_local_descriptors.ipynb)
+* local descriptors
+    * [compute from image](/examples/notebooks/descriptors_computation/compute_local_descriptors_from_image.ipynb)
+
+# Quantization
+* finding <a name="centroids">[centroids](/examples/notebooks/quantization/finding_centroids.ipynb)</a>
+* quantizing global descriptors to <a name="pq_codes">[pq codes](/examples/notebooks/quantization/quantize_global_descriptors_to_pqcodes.ipynb)</a>
+* finding <a name="centroids_pairwise_distances">[centroids pairwise distances](/examples/notebooks/quantization/compute_centroids_pairwise_distances.ipynb)</a>
+
+# Sampling
+It`s often enough to quantize only sample from descriptors.
+
+[Example(sampling sifts)](/examples/notebooks/sampling.ipynb).
+
 # Search
 4 types of search are supported:
 * exhaustive
@@ -46,23 +69,6 @@ requires:
 - [centroids](#centroids)
 - [pq codes](#pq_codes)
 
-
-# Descriptors computation
-* <a name="global_descriptors">global descriptors</a>
-    * [compute from image](/examples/notebooks/descriptors_computation/compute_global_descriptors_from_image.ipynb)
-    * [compute from local descriptors](/examples/notebooks/descriptors_computation/compute_global_descriptors_from_local_descriptors.ipynb)
-* local descriptors
-    * [compute from image](/examples/notebooks/descriptors_computation/compute_local_descriptors_from_image.ipynb)
-
-# Quantization
-* finding <a name="centroids">[centroids](/examples/notebooks/quantization/finding_centroids.ipynb)</a>
-* quantizing global descriptors to <a name="pq_codes">[pq codes](/examples/notebooks/quantization/quantize_global_descriptors_to_pqcodes.ipynb)</a>
-* finding <a name="centroids_pairwise_distances">[centroids pairwise distances](/examples/notebooks/quantization/compute_centroids_pairwise_distances.ipynb)</a>
-
-# Sampling
-It`s often enough to quantize only sample from descriptors.
-
-[Example(sampling sifts)](/examples/notebooks/sampling.ipynb).
 
 # Evaluation
 Step to evaluate search perfomance.
