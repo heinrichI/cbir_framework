@@ -21,11 +21,11 @@ any step in your cbir pipeline.
 (Note that there is considerable mess with way of getting data, processing and saving it. There were intentions to process data in
 stream-like style, but its has led to unpleasant restrictions and time-perfomance issues.)
 
-Framwork depends on python modules in [inverted_multi_index prjoect](https://github.com/DIMAthe47/inverted_multi_index).
+Framework depends on python modules in [inverted_multi_index prjoect](https://github.com/DIMAthe47/inverted_multi_index).
 It utilizes them for fast (I hope) vector operations, building inverted multi-index, perfoming inverted multi-index search,
 exhaustive search with SDC and ADC distance computations.
 
-Here goes major steps and examples os them.
+Here goes major steps and examples of them.
 
 # Descriptors computation
 * <a name="global_descriptors">global descriptors</a>
@@ -82,3 +82,11 @@ Step to evaluate search perfomance.
 * compare memory for descriptors for exhaustive search [Example->](/examples/notebooks/plotting/plot_exhaustive_search_perfomance_memory.ipynb)
 * compare quantization parameters for pq search techniques(adc, sdc, imi) [Example->](/examples/notebooks/plotting/plot_search_perfomance_pq_params.ipynb)
 * compare pq search types(adc, sdc, imi) [Example->](/examples/notebooks/plotting/plot_search_perfomance_search_types.ipynb)
+
+___
+
+# UI
+
+For UI of finding images by example, client-server architecture was implemented. Server needs to be configurated with one of "searcher" (like in examples), then he listens to requests on localhost. Client with GUI connects to server on startup, can choose images in filesystem, and then search for most similar images. (Here file pathes are transmitted to server, because all communication is on one machine, but its not difficult to change it to send/receive image bytes). When server recieves request for search, it searches using searcher it was configurated and send back to client file pathes to nearest images.
+
+![gui screenshot](client_server/client_gui/qt_designer/screenshot.png)
