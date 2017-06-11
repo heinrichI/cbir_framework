@@ -27,9 +27,12 @@ class DataStoreHelper:
         ds_ = ds.SQLiteTableDataStore(path_)
         return ds_
 
-    def local_descriptors_ds(self, descriptor_name):
+    def local_descriptors_ds(self, descriptor_name, one_to_many=True):
         path_ = pjoin(self.base_dir, 'local_descriptors', descriptor_name) + "_imgid"
-        ds_ = ds.SQLiteTableOneToManyDataStore(path_, table_name='id_item_imgid')
+        if one_to_many:
+            ds_ = ds.SQLiteTableOneToManyDataStore(path_, table_name='id_item_imgid')
+        else:
+            ds_ = ds.SQLiteTableDataStore(path_, table_name='id_item_imgid')
         return ds_
 
     def local_descriptors_sample_ds(self, descriptor_name, sample_part):
