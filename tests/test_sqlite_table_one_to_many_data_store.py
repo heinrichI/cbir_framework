@@ -4,7 +4,8 @@ import unittest
 
 import numpy as np
 
-from data_store.sqlite_table_one_to_many_datastore import SQLiteTableOneToManyDataStore
+from core.data_store.sqlite_table_one_to_many_datastore import SQLiteTableOneToManyDataStore
+
 
 def gen_items():
     for i in [5,3,10,2,5]:

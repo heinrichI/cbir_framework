@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="temp_sqlite_db" uuid="449fcbc3-486f-4bf8-900f-11dca1b13b23">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/tests/temp_sqlite_db</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="temp_one_to_many_sqlite_db" uuid="2cc79dda-d56b-4763-aaac-b86b6c2c30b1">
+    <data-source source="LOCAL" name="pq-16-1_centroids" uuid="4dbd69b7-84cb-4897-b114-6ce4118c010a">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\tests\temp_one_to_many_sqlite_db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\sift_1M\ds_data\base_quantization\centroids\pq-16-1_centroids.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
@@ -26,13 +20,13 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="example_compute_sifts_set" uuid="86f0aaad-9349-4ef3-be30-1e3091a1236f">
+    <data-source source="LOCAL" name="pq-16-1_centroids [2]" uuid="5f8b289a-facc-44bc-ad86-31f9b5333282">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\example_compute_sifts_set</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\sift_1M\ds_data\base_quantization\centroids\pq-16-1_centroids.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
@@ -45,13 +39,13 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="example_compute_siftid_sift_imgid_samples0" uuid="2b1620a6-8844-47cc-940e-ae7ff67f558b">
+    <data-source source="LOCAL" name="pq-16-4_centroids" uuid="00aaf0e6-769e-406f-b7d7-7081d91c225f">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\ds_data\example_compute_siftid_sift_imgid_samples0.1-clusters</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\sift_1M\ds_data\base_quantization\centroids\pq-16-4_centroids.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>
@@ -64,13 +58,89 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="example_compute_siftid_sift_imgid_samples0 [2]" uuid="b94448b7-5d90-4059-9dc5-5917db365c94">
+    <data-source source="LOCAL" name="temp_sqlite_db" uuid="c73e0874-9f45-438e-9468-1406fbfef5b3">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\ds_data\example_compute_siftid_sift_imgid_samples0.1-clusters2</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\tests\temp_sqlite_db.sqlite</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/sqlite-jdbc-3.16.1.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/xerial-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="imgid_histogram" uuid="175fe745-1729-4e31-ab42-19b2eb9cc8df">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>SQLite</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\brodatz\ds_data\imgid_histogram</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/sqlite-jdbc-3.16.1.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/xerial-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="imgid_histogram [2]" uuid="4f111902-d3b2-468a-a664-32e975959829">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>SQLite</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\Dima\GoogleDisk\notebooks\cbir_framework\examples\brodatz\ds_data\imgid_histogram</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/sqlite-jdbc-3.16.1.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/xerial-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="sifts_imgid" uuid="09ee645b-c264-4e4c-bcbe-8b0fd93062f8">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>SQLite</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\data\computation\brodatz\local_descriptors\sifts_imgid.sqlite</jdbc-url>
+      <driver-properties>
+        <property name="enable_load_extension" value="true" />
+      </driver-properties>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/sqlite-jdbc-3.16.1.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.16.1/xerial-sqlite-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="bovwproductbincounts_pq-16-1" uuid="81b5b55d-b105-4181-9699-d88e5e0a6aa1">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>SQLite</remarks>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\data\computation\brodatz\global_descriptors\bovwproductbincounts_pq-16-1.sqlite</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

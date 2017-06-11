@@ -1,6 +1,9 @@
 import unittest
+
 import numpy as np
-from common.numpy_utils import translate_matrix_by_keys
+
+from core.common.numpy_utils import translate_matrix_by_keys
+
 
 class TestTranslateByKeys(unittest.TestCase):
 

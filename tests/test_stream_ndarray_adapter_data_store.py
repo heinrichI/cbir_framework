@@ -1,10 +1,10 @@
 import os
 import unittest
 
-from data_store.sqlite_table_datastore import SQLiteTableDataStore
+from core.data_store.sqlite_table_datastore import SQLiteTableDataStore
+from core.data_store.stream_ndarray_adapter_datastore import StreamNdarrayAdapterDataStore
 
-from common.itertools_utils import *
-from data_store.stream_ndarray_adapter_datastore import StreamNdarrayAdapterDataStore
+from core.common.itertools_utils import *
 
 
 class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
@@ -53,6 +53,15 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
         items_sorted_by_ids = adapter_ds.get_items_sorted_by_ids()
         self.assertTrue((StreamNdarrayAdapterDataStoreTestCase.items == items_sorted_by_ids).all())
 
+    def test_get_items_sorted_by_ids_with_slice(self):
+        sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
+                                           StreamNdarrayAdapterDataStoreTestCase.table_name, "ndarray")
+        adapter_ds = StreamNdarrayAdapterDataStore(sqltable_ds, detect_final_shape_by_first_elem=True,
+                                                   slice_get=(slice(None), slice(3)))
+        items_sorted_by_ids = adapter_ds.get_items_sorted_by_ids()
+        truth_items= StreamNdarrayAdapterDataStoreTestCase.items[:, :3]
+        self.assertTrue(np.array_equal(items_sorted_by_ids,truth_items))
+
     def test_get_items_sorted_by_ids_items_bytes(self):
 
         sqltable_ds = SQLiteTableDataStore(StreamNdarrayAdapterDataStoreTestCase.db_path,
@@ -85,3 +94,7 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
             items_sorted_by_ids = sqltable_ds.get_items_sorted_by_ids()
             for arr1, arr2 in zip(items_sorted_by_ids, StreamNdarrayAdapterDataStoreTestCase.items):
                 self.assertTrue((arr1 == arr2).all())
+
+
+if __name__ == '__main__':
+    unittest.main()

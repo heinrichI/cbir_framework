@@ -4,7 +4,7 @@ import unittest
 
 import numpy as np
 
-from data_store.sqlite_table_datastore import SQLiteTableDataStore
+from core.data_store.sqlite_table_datastore import SQLiteTableDataStore
 
 
 class SQLiteTableDataStoreNdarrayTestCase(unittest.TestCase):
@@ -26,7 +26,7 @@ class SQLiteTableDataStoreNdarrayTestCase(unittest.TestCase):
         with SQLiteTableDataStore(cls.db_path,
                                   cls.table_name, "ndarray") as sqltable_ds:
             sqltable_ds.drop(True)
-        os.remove(cls.db_path)
+        os.remove(cls.db_path+'.sqlite')
 
     def test_setUpClass_tearDownClass(self):
         pass
@@ -39,13 +39,24 @@ class SQLiteTableDataStoreNdarrayTestCase(unittest.TestCase):
                 self.assertTrue((arr1 == arr2).all())
 
     def test_get_items_sorted_by_ids_particular_ids(self):
-        ids_sorted = (x for x in range(1,11) if x % 2 == 0)
+        ids_sorted = (x for x in range(1, 11) if x % 2 == 0)
         with SQLiteTableDataStore(SQLiteTableDataStoreNdarrayTestCase.db_path,
                                   SQLiteTableDataStoreNdarrayTestCase.table_name, "ndarray") as sqltable_ds:
             items_sorted_by_ids = sqltable_ds.get_items_sorted_by_ids(ids_sorted)
             items_each_second = itertools.islice(SQLiteTableDataStoreNdarrayTestCase.items, 1, None, 2)
             for arr1, arr2 in zip(items_each_second, items_sorted_by_ids):
                 self.assertTrue((arr1 == arr2).all())
+
+    def test_auto_table_names(self):
+        with SQLiteTableDataStore(SQLiteTableDataStoreNdarrayTestCase.db_path) as sqltable_ds1,\
+                SQLiteTableDataStore(SQLiteTableDataStoreNdarrayTestCase.db_path) as sqltable_ds2:
+            sqltable_ds1.save_items_sorted_by_ids(SQLiteTableDataStoreNdarrayTestCase.items)
+            sqltable_ds2.save_items_sorted_by_ids(SQLiteTableDataStoreNdarrayTestCase.items)
+            items_sorted_by_ids1 = sqltable_ds1.get_items_sorted_by_ids()
+            items_sorted_by_ids2 = sqltable_ds2.get_items_sorted_by_ids()
+            for arr1, arr2 in zip(items_sorted_by_ids1, items_sorted_by_ids2):
+                self.assertTrue((arr1 == arr2).all())
+
 
 if __name__ == '__main__':
     unittest.main()

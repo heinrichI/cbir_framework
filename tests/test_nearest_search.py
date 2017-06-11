@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from search.nearest_search import NearestSearch
+from core.search.nearest_search import NearestSearch
 
 
 class NearestSearchTest(unittest.TestCase):

@@ -1,7 +1,7 @@
 import shutil
 import unittest
 
-from data_store.file_system_directory_datastore import *
+from core.data_store.file_system_directory_datastore import *
 
 
 class TestFileSystemDirectoryDataStore(unittest.TestCase):

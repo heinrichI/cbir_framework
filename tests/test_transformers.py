@@ -2,8 +2,9 @@ import itertools
 import unittest
 
 import numpy as np
+from core.transformer.items_transformer import ItemsTransformer
 
-from transformer.transformers import ItemsTransformer, OpencvMatrixToGLCM
+from core.transformer.opencvmatrix_to_glcm import OpencvMatrixToGLCM
 
 
 def int_to_doubled_int(i):

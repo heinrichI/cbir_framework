@@ -2,8 +2,9 @@ import unittest
 
 import numpy as np
 
-from quantization.pq_quantizer import PQQuantizer
-from transformer.transformers import arrays_to_productbincount, ArraysToProductBinCount
+from core.quantization.pq_quantizer import PQQuantizer
+from core.transformer.arrays_to_productbincount import ArraysToProductBinCount
+from core.transformer.arrays_to_productbincount import arrays_to_productbincount
 
 
 class ArraysToProductBinCountTest(unittest.TestCase):

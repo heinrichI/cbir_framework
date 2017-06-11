@@ -2,7 +2,7 @@ import unittest
 
 import numpy as np
 
-from quantization.pq_quantizer import PQQuantizer, restore_from_clusters
+from core.quantization.pq_quantizer import PQQuantizer, restore_from_clusters
 
 
 class PQQuantizerTest(unittest.TestCase):
@@ -43,6 +43,10 @@ class PQQuantizerTest(unittest.TestCase):
         pq_quantizer_restored = restore_from_clusters(cluster_centers)
         clusters_restored = pq_quantizer_restored.get_cluster_centers()
         self.assertEqual(clusters_restored.shape, cluster_centers.shape)
+
+    def test_max_scalar_index(self):
+        max_scalar_index = PQQuantizerTest.quantizer.max_scalar_index
+        self.assertEqual(max_scalar_index, 1+2*(1))
 
 
 if __name__ == '__main__':
