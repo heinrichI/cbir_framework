@@ -16,7 +16,7 @@ class SQLiteTableDataStoreOneToManyNdarrayTestCase(unittest.TestCase):
     """
        create temp database file and table in it with column type: ndarray
     """
-    db_path = "temp_one_to_many_sqlite_db"
+    db_path = "temp_one_to_many_sqlite_db.sqlite"
     table_name = "temp_one_to_many_table"
 
     @classmethod

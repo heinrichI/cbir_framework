@@ -20,8 +20,8 @@ class ExhaustiveSearcherTest(unittest.TestCase):
             [10, 2, 60, 5]
         ])
 
-        searcher = exhaustive_searcher.ExhaustiveSearcher(items_ndarray=base_vectors, ids_ndarray=ids_ndarray)
-        nearest_ids_ndarray = searcher.find_nearest_ids(query_vectors, metric='l1')
+        searcher = exhaustive_searcher.ExhaustiveSearcher(items_ndarray=base_vectors, ids_ndarray=ids_ndarray, metric='l1')
+        nearest_ids_ndarray = searcher.find_nearest_ids(query_vectors)
         truth_indices = np.array([
             [0, 1, 2, 3],
             [2, 3, 0, 1],

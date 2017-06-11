@@ -11,7 +11,7 @@ class StreamNdarrayAdapterDataStoreTestCase(unittest.TestCase):
     """
          create temp database file and table in it with column type: ndarray
     """
-    db_path = "temp_sqlite_db"
+    db_path = "temp_sqlite_db.sqlite"
     table_name = "temp_table"
     items = np.arange(10 * 5).reshape((10, 5))
 

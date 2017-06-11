@@ -8,7 +8,7 @@ from core.data_store.sqlite_table_datastore import SQLiteTableDataStore
 
 
 class StepscmdTest(unittest.TestCase):
-    db_path = "temp_sqlite_db"
+    db_path = "temp_sqlite_db.sqlite"
     table_name_in = "temp_table_in"
     table_name_out = "temp_table_out"
     items = np.arange(10 * 8).reshape((10, 8))
