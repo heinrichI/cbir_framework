@@ -263,19 +263,33 @@ def plotting_step2(label__x__y: dict, label_prefix, xlabel, ylabel, title='', le
 
 def plotting_step3(subplotvalue__label__x__y: dict, subplotvalue__prefix, label_callback, xlabel, ylabel, title='',
                    legend_loc=None,
-                   save_to_file=None, label__kwargs=None, bar=False):
+                   save_to_file=None, label__kwargs=None, bar=False, **kwargs):
     import matplotlib.pyplot as plt
     plt.close()
     dpi = 120
-    fig = plt.figure(figsize=(20, 15))
+    fig = plt.figure(figsize=(kwargs.get('width', 20), kwargs.get('height', 14)))
     # fig=plt.figure()
     fig.suptitle(title)
-    cols = len(subplotvalue__label__x__y.keys()) ** 0.5
-    for i, subplotvalue in enumerate(sorted(subplotvalue__label__x__y.keys())):
+    import math
+
+    cols = int(math.ceil((len(subplotvalue__label__x__y.keys()) ** 0.5)))
+
+    subplotvalues_positions = kwargs.get('subplotvalues_positions', None)
+    if subplotvalues_positions:
+        subplot_values_ordered = [None] * len(subplotvalue__label__x__y)
+        print(subplot_values_ordered)
+        for subplotvalue in subplotvalues_positions:
+            print(subplotvalue)
+            subplot_values_ordered[subplotvalues_positions[subplotvalue]] = subplotvalue
+    else:
+        subplot_values_ordered = sorted(subplotvalue__label__x__y.keys())
+
+
+    for i, subplotvalue in enumerate(subplot_values_ordered):
         subplot = plt.subplot(cols, cols, i + 1)
         subplotname = subplotvalue__prefix + str(subplotvalue)
         plot_(plt, subplotvalue__label__x__y[subplotvalue], label_callback, xlabel, ylabel, subplotname, legend_loc,
-              label__kwargs,bar)
+              label__kwargs, bar)
 
     plt.tight_layout()
     # save_to_file = None
@@ -322,15 +336,18 @@ def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, title='', 
             subplot.xticks(x_range, x)
             x = np.arange(len(x))
 
+        # scale = 1
+        if logscale:
+            subplot.xscale('log', basex=2)
+            # scale=2
+
         if bar:
-            width = 0.09
+            width = 4
+            # width = 0.09
             subplot.xticks(x - width / 2 + width * len(label_x_y) / 2)
             subplot.bar(x + width * i, y, width, label=label_callback(label), align='center')
         else:
-            if logscale:
-                subplot.semilogx(x, y, label=label_callback(label), basex=2, marker=next(filled_markers), **kwargs)
-            else:
-                subplot.plot(x, y, label=label_callback(label), marker=next(filled_markers), **kwargs)
+            subplot.plot(x, y, label=label_callback(label), marker=next(filled_markers), **kwargs)
 
     try:
         if logscale:

@@ -46,10 +46,10 @@ It`s often enough to quantize only sample from descriptors.
 
 # Search
 4 types of search are supported:
-* exhaustive
-* sdc exhaustive
-* adc exhaustive
-* inverted multi-index
+* [exhaustive](/examples/notebooks/searching/exhaustive_search.ipynb)
+* [sdc exhaustive](/examples/notebooks/searching/sdc_exhaustive_search.ipynb)
+* [adc exhaustive](/examples/notebooks/searching/adc_exhaustive_search.ipynb)
+* [inverted multi-index](/examples/notebooks/searching/inverted_multi_index_search.ipynb)
 
 ### Exhaustive search
 requires:
