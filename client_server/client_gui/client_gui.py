@@ -13,6 +13,7 @@ cached_pixmaps = QPixmapCache()
 # print(cached_pixmaps.cacheLimit())
 cached_pixmaps.setCacheLimit(100 * 2 ** 10)
 
+DISPLAY_IMG_SIZE=200
 
 class SimpleListModel(QAbstractListModel):
     dataChangedSignal = pyqtSignal(int, int)
@@ -36,7 +37,7 @@ class SimpleListModel(QAbstractListModel):
             pixmap = cached_pixmaps.find(full_path)
             if not pixmap:
                 pixmap = QPixmap(full_path)
-                pixmap = pixmap.scaled(100, 100)
+                pixmap = pixmap.scaled(DISPLAY_IMG_SIZE, DISPLAY_IMG_SIZE)
                 cached_pixmaps.insert(full_path, pixmap)
 
             return pixmap
@@ -62,6 +63,9 @@ class MyMainWindow(QMainWindow, design.Ui_main_window):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+
+        self.search_results_list_view.setGridSize(QSize(DISPLAY_IMG_SIZE, DISPLAY_IMG_SIZE))
+
         # self.query_images_list_view.height()
         self.query_images_list_view.clicked.connect(self.onClickAction)
         self.updateQueryListView([])
@@ -143,8 +147,11 @@ class MyMainWindow(QMainWindow, design.Ui_main_window):
         nearest_neighbor_native_ids_list_of_lists = client.read_obj()
         # print(len(nearest_neighbor_native_ids_list))
         # print(nearest_neighbor_native_ids_list)
-        client.send_obj(True)
-        client.close()
+        try:
+            client.send_obj(True)
+            client.close()
+        except:
+            raise Warning("Server shutdown")
 
         return nearest_neighbor_native_ids_list_of_lists
 

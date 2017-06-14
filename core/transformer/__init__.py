@@ -15,6 +15,7 @@ from .opencvmatrix_to_glcm import OpencvMatrixToGLCM
 from .opencvmatrix_to_histogram import OpencvMatrixToHistogram
 from .opencvmatrix_to_lbphistogram import OpencvMatrixToLBPHistogram
 from .opencvmatrix_to_siftset import OpencvMatrixToSiftsSet
+from .opencvmatrix_to_fixedsizesiftset import OpencvMatrixToFixedSizeSiftsSet
 from .parametrized_items_transformer import ParametrizedItemsTransformer
 from .string_to_array import StringToArrayTransformer
 from .string_to_builtin import StringToBuiltin

@@ -18,7 +18,6 @@ import itertools
 def transform_step(data_store_in: DataStore, transformers, data_store_out: DataStore, force=False,
                    print_ds_out_info=None) -> None:
     """
-
           data_store_in and data_store_out must be of same type: both ndarray or both stream.
           transformers must be of ds type
     """
@@ -263,33 +262,36 @@ def plotting_step2(label__x__y: dict, label_prefix, xlabel, ylabel, title='', le
 
 def plotting_step3(subplotvalue__label__x__y: dict, subplotvalue__prefix, label_callback, xlabel, ylabel, title='',
                    legend_loc=None,
-                   save_to_file=None, label__kwargs=None, bar=False, **kwargs):
+                   save_to_file=None, label__kwargs=None, bar=False, subplotvalue__props={}, figsize={}, **kwargs):
+    # print(kwargs)
     import matplotlib.pyplot as plt
     plt.close()
     dpi = 120
-    fig = plt.figure(figsize=(kwargs.get('width', 20), kwargs.get('height', 14)))
+    fig = plt.figure(figsize=(figsize.get('width', 20), figsize.get('height', 14)))
     # fig=plt.figure()
     fig.suptitle(title)
     import math
 
     cols = int(math.ceil((len(subplotvalue__label__x__y.keys()) ** 0.5)))
+    rows=len(subplotvalue__label__x__y)/cols
 
     subplotvalues_positions = kwargs.get('subplotvalues_positions', None)
     if subplotvalues_positions:
         subplot_values_ordered = [None] * len(subplotvalue__label__x__y)
-        print(subplot_values_ordered)
+        # print(subplot_values_ordered)
         for subplotvalue in subplotvalues_positions:
-            print(subplotvalue)
+            # print(subplotvalue)
             subplot_values_ordered[subplotvalues_positions[subplotvalue]] = subplotvalue
     else:
         subplot_values_ordered = sorted(subplotvalue__label__x__y.keys())
 
-
     for i, subplotvalue in enumerate(subplot_values_ordered):
-        subplot = plt.subplot(cols, cols, i + 1)
+        subplot = plt.subplot(rows, cols, i + 1)
         subplotname = subplotvalue__prefix + str(subplotvalue)
-        plot_(plt, subplotvalue__label__x__y[subplotvalue], label_callback, xlabel, ylabel, subplotname, legend_loc,
-              label__kwargs, bar)
+        plot_(plt, subplotvalue__label__x__y[subplotvalue], label_callback, xlabel, ylabel, subplotvalue, subplotname,
+              legend_loc,
+              label__kwargs, bar, subplotprops=subplotvalue__props.get(subplotvalue, {}))
+              # label__kwargs, bar, subplotprops=subplotvalue__props.get(subplotvalue, {}), **kwargs)
 
     plt.tight_layout()
     # save_to_file = None
@@ -301,8 +303,9 @@ def plotting_step3(subplotvalue__label__x__y: dict, subplotvalue__prefix, label_
         plt.savefig(save_to_file)
 
 
-def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, title='', legend_loc=None, label__kwargs=None,
-          bar=False):
+def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, subplotvalue, title='', legend_loc=None,
+          label__kwargs=None,
+          bar=False, subplotprops={}):
     label_x_y = []
     logscale = False
     x_set = set()
@@ -310,9 +313,9 @@ def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, title='', 
         x__y = label__x__y[label]
         x = sorted(list(x__y))
         x_set.update(x)
-        # print(max(x_set), min(x_set))
+        # print(max(x_set), min(x_set)+1)
         try:
-            if max(x_set) / min(x_set) > 30:
+            if max(x_set) / (min(x_set)+1) > 20:
                 logscale = True
         except:
             pass
@@ -342,8 +345,8 @@ def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, title='', 
             # scale=2
 
         if bar:
-            width = 4
-            # width = 0.09
+            # width = 4
+            width = 0.09
             subplot.xticks(x - width / 2 + width * len(label_x_y) / 2)
             subplot.bar(x + width * i, y, width, label=label_callback(label), align='center')
         else:
@@ -357,8 +360,21 @@ def plot_(subplot, label__x__y: dict, label_callback, xlabel, ylabel, title='', 
     except:
         pass
 
+    # print('plot_', subplotprops)
+    if subplotprops.get('annotates', False):
+        for ann in subplotprops['annotates']:
+            subplot.annotate(**(ann))
+
+    if subplotprops.get('texts', False):
+        for text in subplotprops['texts']:
+            subplot.text(**(text))
+
+    # if subplotprops.get('arrow', False):
+    #     subplot.arrow(**(subplotprops['arrow']))
+    #     subplot.arrow(64, 0.5, 0, 0.7)
+
     # lgd = subplot.legend(loc=2, bbox_to_anchor=(1.05, 1))
-    lgd = subplot.legend()
+    lgd = subplot.legend(fontsize=11)
     subplot.title(title)
     subplot.xlabel(xlabel)
     subplot.ylabel(ylabel)

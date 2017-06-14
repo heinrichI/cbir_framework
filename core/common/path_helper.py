@@ -27,6 +27,12 @@ class DataStoreHelper:
         ds_ = ds.SQLiteTableDataStore(path_)
         return ds_
 
+    def global_descriptors_sample_ds(self, descriptor_name, sample_part):
+        path_ = pjoin(self.base_dir, 'global_descriptors', descriptor_name) + "_sample-" + str(sample_part)
+        ds_ = ds.SQLiteTableDataStore(path_)
+        return ds_
+
+
     def local_descriptors_ds(self, descriptor_name, one_to_many=True):
         path_ = pjoin(self.base_dir, 'local_descriptors', descriptor_name) + "_imgid"
         if one_to_many:
@@ -132,3 +138,7 @@ class DataStoreHelper:
             return pq_params
         except:
             return None
+
+    def build_pq_params_arr(self, K_arr, m_arr):
+        pq_params_arr = [{'n_clusters': K, 'n_quantizers': m} for K in K_arr for m in m_arr]
+        return pq_params_arr

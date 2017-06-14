@@ -9,8 +9,9 @@ from core.common.aggregate_iterable import aggregate_iterable
 
 class NumpyDataStore(datastore.DataStore):
     # TODO decide about ids
-    def __init__(self, items_sorted_by_ids: np.ndarray = None):
+    def __init__(self, items_sorted_by_ids: np.ndarray = None, iter_=False):
         self.save_items_sorted_by_ids(items_sorted_by_ids)
+        self.iter_ = iter_
 
         # if ids_sorted is None:
         #     self.ids_sorted = np.arange(1, len(items_sorted_by_ids) + 1)
@@ -21,9 +22,15 @@ class NumpyDataStore(datastore.DataStore):
         if ids_sorted is not None:
             ids_sorted = np.array(ids_sorted, dtype='int32')
             ids_sorted -= 1
-            return np.take(self.items_sorted_by_ids, ids_sorted, axis=0)
+            items = np.take(self.items_sorted_by_ids, ids_sorted, axis=0)
+            if self.iter_:
+                items = iter(items)
+            return items
         else:
-            return self.items_sorted_by_ids
+            items = self.items_sorted_by_ids
+            if self.iter_:
+                items = iter(items)
+            return items
 
     def get_count(self):
         return len(self.items_sorted_by_ids)
@@ -52,7 +59,10 @@ class NumpyDataStore(datastore.DataStore):
         self.ids_sorted = ids_sorted
 
     def get_ids_sorted(self):
-        return self.ids_sorted
+        ids = self.ids_sorted
+        if self.iter_:
+            ids = iter(ids)
+        return ids
 
     def is_stream_data_store(self):
         return False

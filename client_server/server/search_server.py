@@ -21,9 +21,12 @@ def build_query_items_ds_from_json_dict(obj):
 
 
 class SearchServer(ThreadedServer):
-    def start(self):
+    def __init__(self, search_config):
+        super().__init__()
+        self.search_config = search_config
+
+    def start(self, ):
         super().start()
-        self.search_config = build_config_dict()
 
     def _process_message(self, obj):
         n_nearest = obj['n_nearest']
@@ -55,17 +58,9 @@ class SearchServer(ThreadedServer):
 
 
 if __name__ == '__main__':
-    ss = SearchServer()
-    """
-    obj = {
-        'query_items_ds': {
-            'type': 'filedirectory',
-            'params': [
-                r'C:\data\images\brodatz\data.brodatz\size_213x213'
-            ]
-        },
-        'n_nearest': 10
-    }
-    # ss._process_message(obj)
-    """
+    search_config = build_config_dict()
+    if search_config is None:
+        raise RuntimeError("Config is None")
+
+    ss = SearchServer(search_config)
     ss.start()
