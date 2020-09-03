@@ -1,5 +1,10 @@
 import numpy as np
 
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..')))
+
 from client_server.json_socket.tserver import ThreadedServer
 from client_server.server.config_builder import *
 from core import steps

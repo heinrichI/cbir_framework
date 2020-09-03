@@ -50,3 +50,4 @@ fabric.properties
 
 examples/ds_data/
 examples/.ipynb_checkpoints/
+__pycache__*
