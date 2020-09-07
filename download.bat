@@ -1,2 +1,2 @@
-python -m pip download -r requirements.txt dist
+python -m pip download -v -r requirements.txt --dest dist
 pause
