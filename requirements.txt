@@ -1,3 +1,5 @@
 numpy
 PyQt5
 sklearn
+opencv-python
+scikit-image
