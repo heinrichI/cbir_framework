@@ -4,6 +4,9 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import sys
 import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..')))
+
 from client_server.client_gui.qt_designer import design
 from client_server.json_socket.jsocket_base import JsonClient
 from core.data_store.file_system_directory_datastore import FileSystemDirectoryDataStore
