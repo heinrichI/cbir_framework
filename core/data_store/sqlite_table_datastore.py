@@ -44,6 +44,9 @@ class SQLiteTableDataStore(DataStore):
         # self.connection.execute('PRAGMA synchronous=OFF')
         # self.connection.execute('PRAGMA count_changes=OFF')
         # self.connection.execute('PRAGMA page_size={}'.format(2 ** 14))
+        self.connection.execute(
+            r"CREATE TABLE IF NOT EXISTS {0} (item_id INTEGER PRIMARY KEY, item {1})".format(self.table_name,
+                                                                                             self.item_column_type))
 
     def close(self):
         self.connection.close()
