@@ -12,8 +12,8 @@ from core.common.ds_utils import print_ds_items_info
 from core.search.inverted_multi_index_searcher import InvertedMultiIndexSearcher
 from core.quantization.pq_quantizer import PQQuantizer, restore_from_clusters, build_pq_params_str
 from core.common.path_helper import DataStoreHelper
-get_ipython().run_line_magic('load_ext', 'autoreload')
-get_ipython().run_line_magic('autoreload', '2')
+# get_ipython().run_line_magic('load_ext', 'autoreload')
+# get_ipython().run_line_magic('autoreload', '2')
 
 # %% [markdown]
 # # Inverted multi-index search
