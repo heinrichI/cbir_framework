@@ -4,3 +4,4 @@ sklearn
 opencv-python
 scikit-image
 pandas
+Cython

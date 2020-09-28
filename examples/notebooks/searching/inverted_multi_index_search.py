@@ -1,9 +1,12 @@
 # To add a new cell, type '# %%'
 # To add a new markdown cell, type '# %% [markdown]'
 # %%
-from IPython import get_ipython
+#from IPython import get_ipython
 
-# %%
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..\..')))
+
 from __init__ import *
 import core.steps as steps
 from core import data_store as ds
